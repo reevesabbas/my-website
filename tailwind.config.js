@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        fjalla: 'Fjalla-One'
+        amiri: 'Amiri-Bold'
       }
     },
   },
