@@ -1,10 +1,23 @@
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: true,
   theme: {
-    extend: {},
+    colors: {
+      'darkestPurple': '#06001F',
+      'darkOrange': '#8C2B00',
+      'darkerOrange': '#4D1700',
+      'darkBlue': '#003F7D',
+      'darkerBlue': '#002347',
+      'white': '#FFFFFF'
+    },
+    extend: {
+      fontFamily: {
+        fjalla: 'Fjalla-One'
+      }
+    },
   },
   plugins: [],
 }
