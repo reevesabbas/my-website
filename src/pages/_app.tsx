@@ -1,12 +1,15 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Layout from '../components/layout/layout'
+import {ThemeProvider} from 'next-themes'
+
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider attribute='class'>
+      <div className='bg-white dark:bg-darkestPurple'>
+        <Component {...pageProps} />
+      </div>
+    </ThemeProvider>
   )
 }
 
