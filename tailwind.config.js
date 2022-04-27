@@ -6,14 +6,18 @@ module.exports = {
   darkMode: 'class',
   theme: {
     colors: {
-      'darkestPurple': '#06001F',
+      'lightPurple': '#CCC0E7',
+      'darkerPurple': '#16092D',
+      'darkestPurple': '#080014',
       'orange': '#EC4800',
-      'darkOrange': '#8C2B00',
+      'darkOrange': '#BD5635',
       'darkerOrange': '#4D1700',
-      'blue': '#0075FF',
+      'blue': '#006FDC',
       'darkBlue': '#003F7D',
       'darkerBlue': '#002347',
-      'white': '#FFFFFF'
+      'darkestBlue': '#122771',
+      'white': '#DDDDE9',
+      'black': '#000000'
     },
     extend: {
       fontFamily: {
