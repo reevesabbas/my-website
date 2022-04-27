@@ -17,7 +17,7 @@ const Navbar: React.FC<Props> = () => {
   const handleClick = () => setMenu(!menu);
   
   return (
-    <div className='fixed w-full h-[85px] flex justify-center items-center bg-white dark:bg-darkestPurple'>
+    <div className='fixed w-full h-[85px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple'>
 
       {/** Nav */}
 
@@ -54,7 +54,7 @@ const Navbar: React.FC<Props> = () => {
       <div className={!menu ? 'hidden' : 'md:hidden absolute top-0 left-0 w-full h-screen bg-lightPurple dark:bg-darkerPurple flex flex-col justify-center items-center'}>
         <ul className='space-y-6 text-center'>
           <li> <TextButton> HOME </TextButton></li>
-          <li> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+          <li className='pb-3'> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
             {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
           </TextButton></li>
           <li> <TextButton> CONTACT </TextButton> </li>
