@@ -17,20 +17,20 @@ const Navbar: React.FC<Props> = () => {
   const handleClick = () => setMenu(!menu);
   
   return (
-    <div className='fixed w-full h-[85px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple'>
+    <div className='fixed w-full h-[70px] md:h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple z-10 md:drop-shadow-md dark:drop-shadow-none'>
 
       {/** Nav */}
 
       <div className='hidden md:flex'>
-        <div className='pr-2 pl-5 pt-1'>
-          {theme === 'dark' ? <BsFillSunFill size={22}> </BsFillSunFill> : <FaCloudMoon size={22}> </FaCloudMoon>}
+        <div className='pr-3 pl-5 pt-1 drop-shadow-lg'>
+          {theme === 'dark' ? <BsFillSunFill size={30}> </BsFillSunFill> : <FaCloudMoon size={30} > </FaCloudMoon>}
         </div>
-        <div className='flex space-x-[350px]'>
+        <div className='flex space-x-[200px] lg:space-x-[450px]'>
             <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
               {theme === 'dark' ? 'LIGHT' : 'DARK'}
             </TextButton>
           <div>
-            <ul className='flex space-x-6'>
+            <ul className='flex space-x-8'>
               <li> <TextButton> CONTACT </TextButton> </li>
               <li><TextButton> RESUME </TextButton> </li>
               <li><TextButton> INTERESTS </TextButton> </li>
@@ -42,9 +42,9 @@ const Navbar: React.FC<Props> = () => {
 
       {/** Mobile Hamburger */}
 
-      <div className='md:hidden flex w-full justify-end pr-10 z-10'>
-        <button onClick={handleClick} className='hover:scale-110 hover:text-blue active:translate-y-0.5 active:text-blue dark:active:text-blue ease-in-out duration-150 drop-shadow-lg'>
-          {!menu ? <FaBars size={25} /> : <CgClose size={25} /> }
+      <div className='md:hidden flex w-full justify-end pr-5 pt-2 z-10'>
+        <button onClick={handleClick} className='hover:scale-110 hover:text-blue dark:hover:text-orange active:translate-y-0.5 active:text-darkBlue dark:active:text-darkerOrange ease-in-out duration-150 drop-shadow-lg'>
+          {!menu ? <FaBars size={30} /> : <CgClose size={35} /> }
         </button>
       </div>
 
