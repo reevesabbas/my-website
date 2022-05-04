@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;700&family=Lora:ital,wght@1,700&family=Yeseva+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   @font-face {
@@ -17,4 +20,22 @@
     font-display: swap;
     font-style: normal;
   }
+}
+
+@layer utilities {
+    .text-shadow {
+      text-shadow: 2.5px 2.5px 0px #7098FE;
+    }
+    .text-shadow-dark {
+      text-shadow: 3px 3px 0px #9C2500;
+    }
+    .text-shadow-md {
+      text-shadow: 4px 4px 8px black;
+    }
+    .text-shadow-lg {
+      text-shadow: 15px 15px 30px black;
+    }
+    .text-shadow-none {
+      text-shadow: none;
+    }
 }
