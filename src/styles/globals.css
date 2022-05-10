@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .content-container {
+    @apply w-full px-6 md:w-[1000px] md:px-0;
+  }
+}
+
+body {
+  @apply flex flex-col items-center dark:bg-darkestPurple bg-lightestPurple min-h-screen min-w-full ;
+}
+
+section {
+  @apply p-7 md:p-0 md:py-7
+}
+
 
 @layer base {
   @font-face {
@@ -28,12 +42,6 @@
     }
     .text-shadow-dark {
       text-shadow: 3px 3px 0px #9C2500;
-    }
-    .text-shadow-md {
-      text-shadow: 4px 4px 8px black;
-    }
-    .text-shadow-lg {
-      text-shadow: 15px 15px 30px black;
     }
     .text-shadow-none {
       text-shadow: none;

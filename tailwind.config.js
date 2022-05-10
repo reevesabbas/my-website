@@ -10,7 +10,7 @@ module.exports = {
       'lightPurple': '#DBD0F2',
       'purple': '#733FE3',
       'darkPurple': '#1A0144',
-      'darkestPurple': '#080014',
+      'darkestPurple': '#0B001E',
       'lightOrange': '#FFD3C5',
       'orange': '#FE5E19',
       'darkOrange': '#9C2500',
@@ -25,6 +25,10 @@ module.exports = {
       'black': '#000000'
     },
     extend: {
+      screens: {
+        md: '1050px',
+        sm: '775px'
+      },
       fontFamily: {
         yeseva: 'Yeseva One',
         amiri: 'Amiri-Regular',
