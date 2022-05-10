@@ -1,23 +1,27 @@
 import React from 'react'
 import { GrGithub, GrInstagram, GrTwitter } from 'react-icons/gr'
-import { IconType } from 'react-icons/lib';
+import { IconBaseProps, IconType } from 'react-icons/lib';
 import IconButton from '../Buttons/IconButton'
 
 interface Props {
   title: string;
-  icon?: IconType;
-  body: string;
+  icon?: IconBaseProps;
   children: React.ReactNode
 }
 
-const GenContainer: React.FC<Props> = ({children, title, icon, body, ...rest}) => {
+const GenContainer: React.FC<Props> = ({children, title, icon, ...rest}) => {
   return (
-    <div className='w-[975px] h-fit flex mx-auto dark:bg-lightestBlue bg-black dark:bg-opacity-5 bg-opacity-5 rounded-lg md:p-10 p-7'>
-      <div className='w-full flex flex-col justify-center space-y-3 text-left'>
-        <h1 className='text-4xl font-yeseva dark:text-white'> {title} </h1>
-        <p className='font-amiri text-lg font-semibold dark:font-medium'> {body} </p>
-      </div>
-    </div>
+      <section className='md:max-w-[1250px] flex mx-auto'>
+        <div className='md:w-[1000px] sm:w-full h-fit flex mx-auto dark:bg-lightestBlue bg-darkPurple dark:bg-opacity-[0.065] bg-opacity-10 rounded-lg p-10'>
+          <div className='w-full flex flex-col justify-center space-y-6 md:text-left text-center'>
+            <header className='flex flex-row justify-center md:justify-start'>
+              <h1 className='text-3xl md:text-4xl font-yeseva dark:text-white'> {title} </h1>
+              <div className='w-fit h-fit pl-4 dark:text-orange text-blue'> <> {icon} </> </div>
+            </header>
+            <p className='font-amiri text-xl font-semibold dark:font-medium leading-9'> {children} </p>
+          </div>
+        </div>
+      </section>  
   )
 }
 
