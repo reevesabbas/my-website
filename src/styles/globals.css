@@ -4,18 +4,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .content-container {
-    @apply w-full px-6 md:w-[1000px] md:px-0;
-  }
+html {
+  scroll-padding-top: 90px;
 }
 
 body {
-  @apply flex flex-col items-center dark:bg-darkestPurple bg-lightestPurple min-h-screen min-w-full ;
+  @apply flex flex-col items-center dark:bg-darkestPurple bg-lightestPurple min-h-screen min-w-full;
 }
 
 section {
   @apply p-7 md:p-0 md:py-7
+  
+}
+
+h1 {
+  @apply text-4xl md:text-5xl font-yeseva dark:text-white;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-yeseva dark:text-white;
+}
+
+p {
+  @apply font-amiri text-xl font-semibold dark:font-medium leading-9;
+}
+
+form input, form textarea {
+  @apply dark:bg-[#36313C] bg-lightestPurple p-2 text-lg rounded-sm font-amiri
+}
+
+@layer components {
+  .content-container {
+    @apply w-full px-6 md:w-[1000px] md:px-0;
+  }
 }
 
 
@@ -37,13 +58,13 @@ section {
 }
 
 @layer utilities {
-    .text-shadow {
-      text-shadow: 2.5px 2.5px 0px #7098FE;
-    }
-    .text-shadow-dark {
-      text-shadow: 3px 3px 0px #9C2500;
-    }
-    .text-shadow-none {
-      text-shadow: none;
-    }
+  .text-shadow {
+    text-shadow: 2.5px 2.5px 0px #7098FE;
+  }
+  .text-shadow-dark {
+    text-shadow: 3px 3px 0px #9C2500;
+  }
+  .text-shadow-none {
+    text-shadow: none;
+  }
 }
