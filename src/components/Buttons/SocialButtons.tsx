@@ -9,22 +9,19 @@ const SocialButtons = () => {
         href='https://twitter.com/reevfs'
         target='_blank'
         rel='noopener noreferrer'>
-          <IconButton icon={GrTwitter} >
-            <GrTwitter size={45}/> 
+          <IconButton Icon={GrTwitter} >
           </IconButton>
         </a>
         <a
         href='https://github.com/reevesabbas'
         target='_blank'>
-          <IconButton icon={GrGithub}>
-            <GrGithub size={47} />
+          <IconButton Icon={GrGithub}>
           </IconButton>
         </a>
         <a
         href='https://www.instagram.com/reeves.19/'
         target='_blank'>
-          <IconButton icon={GrInstagram}>
-            <GrInstagram size={45} />
+          <IconButton Icon={GrInstagram}>
           </IconButton>
         </a>
       </div>
