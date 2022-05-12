@@ -17,8 +17,6 @@ const Navbar: React.FC<Props> = () => {
   const {theme, setTheme} = useTheme();
   const handleClick = () => setMenu(!menu);
 
-  useEffect(() => setTheme('dark'), [])
-  
   return (
     <div className='fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple z-10 drop-shadow-md dark:drop-shadow-none'>
 
@@ -33,13 +31,13 @@ const Navbar: React.FC<Props> = () => {
               {theme === 'dark' ? 'LIGHT' : 'DARK'}
             </TextButton>
           <div>
-            <ul className='flex space-x-8'>
+            <div className='flex space-x-8'>
+              <a href='#projects'> <TextButton> PROJECTS </TextButton> </a>
               <a href='#contact'><TextButton> CONTACT </TextButton> </a>
               <Link href='/Abbas_Reeves.pdf'> 
                 <a> <TextButton> RESUME </TextButton> </a>
               </Link> 
-              <a href='#interests'> <TextButton> INTERESTS </TextButton> </a>
-            </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -57,15 +55,17 @@ const Navbar: React.FC<Props> = () => {
       {/**Mobile Nav */}
       
       <div className={!menu ? 'hidden' : 'md:hidden absolute top-0 left-0 w-full h-screen bg-lightPurple dark:bg-darkPurple flex flex-col justify-center items-center'}>
-        <ul className='space-y-6 text-center'>
-          <li> <TextButton> HOME </TextButton></li>
-          <li className='pb-3'> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+        <div className='flex flex-col space-y-9 text-center'>
+          <a href='#home'> <TextButton onClick={() => setMenu(false)}> HOME </TextButton></a>
+          <a className='pb-3'> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
             {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
-          </TextButton></li>
-          <li> <TextButton> CONTACT </TextButton> </li>
-          <li> <TextButton> RESUME </TextButton> </li>
-          <li> <TextButton> INTERESTS </TextButton> </li>
-        </ul>
+          </TextButton></a>
+          <a href='#projects'> <TextButton onClick={() => setMenu(false)}> PROJECTS </TextButton> </a>
+          <a href='#contact'><TextButton onClick={() => setMenu(false)}> CONTACT </TextButton> </a>
+          <Link href='/Abbas_Reeves.pdf'> 
+            <a> <TextButton> RESUME </TextButton> </a>
+          </Link> 
+        </div>
       </div>
 
 

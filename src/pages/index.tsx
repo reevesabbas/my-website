@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
       {/* Intro Container */}
 
-      <section className='flex px-10 mt-[200px]'>
+      <section id='home' className='flex px-10 mt-[200px]'>
         <div className='flex flex-col justify-end space-y-5 text-center md:text-left'>
           <h1> Reeves Abbas</h1>
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
@@ -70,7 +70,8 @@ const Home: NextPage = () => {
 
 
       {/* Projects Container */}
-      <GenContainer title='Projects' icon={<FcBriefcase size={40}/>}>
+      <GenContainer id='projects' title='Projects' icon={<FcBriefcase size={40}/>}>
+        Here is a brief overview of some of the projects I have worked on.
         <Carousel />
       </GenContainer>
 
@@ -90,12 +91,13 @@ const Home: NextPage = () => {
       {/* Contact Container */}
 
       <GenContainer id='contact' title='Contact' icon={<FcFeedback size={40}/>}>
-        Feel free to leave me a message here or email me at: <em> reeves.abbas@gmail.com </em>
+        Feel free to leave me a message here or email me at: <em className='select-all'> reeves.abbas@gmail.com </em>
         <ContactForm />
       </GenContainer>
 
-      <div className='h-[150px] flex mx-auto justify-center items-center mb-5'>
+      <div className='h-full flex flex-col mx-auto justify-end items-center py-14 space-y-5'>
         <SocialButtons />
+        <p> Thanks again for visiting! :-) </p>
       </div>
 
 
