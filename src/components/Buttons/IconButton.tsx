@@ -3,11 +3,12 @@ import { IconType } from 'react-icons/lib';
 
 interface Props {
   Icon: IconType;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: (param?: any) => void;
+  size: number;
 }
 
-const IconButton: React.FC<Props> = ({Icon, children, onClick, ...rest}) => {
+const IconButton: React.FC<Props> = ({Icon, children, onClick, size, ...rest}) => {
   return (
     <button 
       className='hover:scale-110 hover:text-blue active:translate-y-0.5 active:text-darkerBlue ease-in-out
@@ -15,7 +16,7 @@ const IconButton: React.FC<Props> = ({Icon, children, onClick, ...rest}) => {
        onClick={onClick}
        {...rest}
        >
-         <Icon size={45}/>
+         <Icon size={size}/>
     </button>
   )
 }

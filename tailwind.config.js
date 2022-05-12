@@ -22,7 +22,9 @@ module.exports = {
       'darkerBlue': '#002347',
       'darkestBlue': '#122771',
       'white': '#FFFFFF',
-      'black': '#000000'
+      'black': '#000000',
+      'lighterGray': '#9c9aaa',
+      'lightGray': '#807E8C',
     },
     extend: {
       screens: {
