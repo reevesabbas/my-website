@@ -25,6 +25,10 @@ h2 {
   @apply text-3xl md:text-4xl font-yeseva dark:text-white;
 }
 
+h3 {
+  @apply md:text-xl text-lg font-yeseva dark:text-orange text-blue
+}
+
 p {
   @apply font-amiri text-xl font-semibold dark:font-medium leading-9;
 }
@@ -35,7 +39,7 @@ form input, form textarea {
 
 @layer components {
   .content-container {
-    @apply w-full px-6 md:w-[1000px] md:px-0;
+    @apply h-[500px] w-full px-6 md:w-[1000px] md:px-0;
   }
 }
 
