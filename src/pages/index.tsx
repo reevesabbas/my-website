@@ -1,14 +1,14 @@
 import React from 'react';
 import type { NextPage } from 'next'
 import { FcSupport, FcBriefcase, FcFeedback, FcFilmReel, FcPlanner } from 'react-icons/fc'
-import { SiTypescript, SiReact, SiHtml5, SiTailwindcss, SiJest, SiExpress } from 'react-icons/si'
+import { SiTypescript, SiReact, SiStyledcomponents, SiTailwindcss, SiJest, SiExpress } from 'react-icons/si'
 
 import Navbar from '../components/Navbar';
 import GenContainer from '../components/GenContainer';
 import SocialButtons from '../components/Buttons/SocialButtons';
 import ContactForm from '../components/ContactForm';
 import HobbieList from '../components/HobbieList/HobbieList';
-import Carousel from '../components/Carousel/Carousel';
+import Carousel from '../components/Carousel';
 
 const Home: NextPage = () => {
   return (
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       {/* Skills Container */}
 
       <GenContainer id='skills' title={'Skills'} icon={<FcSupport size={40}/>}>
-        These are just some of the dev tools I feel most confident with to use in my projects.
+        <p> These are just some of the dev tools I feel most confident with to use in my projects. </p>
         <div className='flex md:flex-row flex-col items-center text-center md:space-x-[85px] pt-8'>
           <ul className='flex flex-row md:space-x-[85px] sm:space-x-[150px] space-x-[60px]'>
             <li>
@@ -43,26 +43,26 @@ const Home: NextPage = () => {
               <p className='pt-4'> Typescript </p>
             </li>
             <li>
-              <SiHtml5 size={80} fill='#e34c26' />
-              <p className='pt-4'> HTML </p>
+              <SiJest size={80} fill='#a0444c'/>
+              <p className='pt-4'> Jest </p>
+            </li>
+            <li>
+              <SiExpress size={80} />
+              <p className='pt-4'> Express </p>
+            </li>
+          </ul>
+          <ul className='flex flex-row md:space-x-[85px] sm:space-x-[150px] space-x-[60px] md:pt-0 pt-8'>
+            <li>
+              <SiStyledcomponents size={80} fill='#dd939e'/>
+              <p className='pt-4 text-lg'> Styled Comp. </p>
             </li>
             <li>
               <SiReact size={80} fill='#61dbfb' />
               <p className='pt-4'> React </p>
             </li>
-          </ul>
-          <ul className='flex flex-row md:space-x-[85px] sm:space-x-[150px] space-x-[60px] md:pt-0 pt-8'>
-            <li>
-              <SiJest size={80} fill='#a0444c'/>
-              <p className='pt-4'> Jest </p>
-            </li>
             <li>
               <SiTailwindcss size={80} fill='#34b4ec' />
               <p className='pt-4'> Tailwind </p>
-            </li>
-            <li>
-              <SiExpress size={80} />
-              <p className='pt-4'> Express </p>
             </li>
           </ul>
         </div>
@@ -70,20 +70,23 @@ const Home: NextPage = () => {
 
 
       {/* Projects Container */}
+      
       <GenContainer id='projects' title='Projects' icon={<FcBriefcase size={40}/>}>
-        Here is a brief overview of some of the projects I have worked on.
+       <p> Here is a brief overview of some of the projects I have worked on. </p>
         <Carousel />
       </GenContainer>
 
+      {/** What's Next Container */}
+
       <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}>
-        Something about what I plan on doing next, and future goals.
+        <p> Currently seeking employment </p>
       </GenContainer>
 
       {/* Interests Container */}
 
       <GenContainer id='interests' title='Interests/Hobbies' icon={<FcFilmReel size={40}/>}>
-        Aside from my interests developing, I'd love to share some of my favorite Games, Music, and Anime. In hopes to
-        collaborate with others to produce tools that will supplement these hobbies for their communities.
+        <p> Aside from my interests developing, I'd love to share some of my favorite Games, Music, and Anime. In hopes to
+        connect and collaborate with others, to produce tools that will supplement these hobbies for their communities. </p>
         <HobbieList />
       </GenContainer>
 
@@ -91,14 +94,14 @@ const Home: NextPage = () => {
       {/* Contact Container */}
 
       <GenContainer id='contact' title='Contact' icon={<FcFeedback size={40}/>}>
-        Feel free to leave me a message here or email me at: <em className='select-all'> reeves.abbas@gmail.com </em>
+        <p> Feel free to leave me a message here or email me at: <em className='select-all'> reeves.abbas@gmail.com </em> </p>
         <ContactForm />
       </GenContainer>
 
-      <div className='h-full flex flex-col mx-auto justify-end items-center py-14 space-y-5'>
+      <footer className='h-full flex flex-col mx-auto justify-center items-center py-14 space-y-5'>
         <SocialButtons />
         <p> Thanks again for visiting! :-) </p>
-      </div>
+      </footer>
 
 
     </div>
