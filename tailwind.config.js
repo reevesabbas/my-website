@@ -29,12 +29,12 @@ module.exports = {
     extend: {
       screens: {
         md: '1050px',
-        sm: '775px'
+        sm: '875px'
       },
       fontFamily: {
         yeseva: 'Yeseva One',
         amiri: 'Amiri-Regular',
-        fjalla: 'Fjalla-One'
+        fjalla: 'Fjalla-One',
       }
     },
   },
