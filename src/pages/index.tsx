@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
       {/* Intro Container */}
 
-      <section id='home' className='flex px-10 mt-[200px]'>
+      <section id='home' className='flex sm:px-10 px-2 mt-[200px]'>
         <div className='flex flex-col justify-end space-y-5 text-center md:text-left'>
           <h1> Reeves Abbas</h1>
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
@@ -36,36 +36,32 @@ const Home: NextPage = () => {
 
       <GenContainer id='skills' title={'Skills'} icon={<FcSupport size={40}/>}>
         <p> These are just some of the dev tools I feel most confident with to use in my projects. </p>
-        <div className='flex md:flex-row flex-col items-center text-center md:space-x-[85px] pt-8'>
-          <ul className='flex flex-row md:space-x-[85px] sm:space-x-[150px] space-x-[60px]'>
-            <li>
-              <SiTypescript size={80} fill='#007acc' />
+          <ul className='flex flex-wrap text-center justify-center md:space-x-12 space-x-5 py-5'>
+            <li className='p-3'>
+              <SiTypescript size={80} fill='#007acc'/>
               <p className='pt-4'> Typescript </p>
             </li>
-            <li>
+            <li className='p-3'>
               <SiJest size={80} fill='#a0444c'/>
               <p className='pt-4'> Jest </p>
             </li>
-            <li>
+            <li className='p-3'>
               <SiExpress size={80} />
               <p className='pt-4'> Express </p>
             </li>
-          </ul>
-          <ul className='flex flex-row md:space-x-[85px] sm:space-x-[150px] space-x-[60px] md:pt-0 pt-8'>
-            <li>
-              <SiStyledcomponents size={80} fill='#dd939e'/>
+            <li className='p-3'>
+              <SiStyledcomponents size={80} fill='#bd717d'/>
               <p className='pt-4 text-lg'> Styled Comp. </p>
             </li>
-            <li>
+            <li className='p-3'>
               <SiReact size={80} fill='#61dbfb' />
               <p className='pt-4'> React </p>
             </li>
-            <li>
+            <li className='p-3'>
               <SiTailwindcss size={80} fill='#34b4ec' />
               <p className='pt-4'> Tailwind </p>
             </li>
           </ul>
-        </div>
       </GenContainer>
 
 
@@ -85,8 +81,7 @@ const Home: NextPage = () => {
       {/* Interests Container */}
 
       <GenContainer id='interests' title='Interests/Hobbies' icon={<FcFilmReel size={40}/>}>
-        <p> Aside from my interests developing, I'd love to share some of my favorite Games, Music, and Anime. In hopes to
-        connect and collaborate with others, to produce tools that will supplement these hobbies for their communities. </p>
+        <p> Here are some of my favorite music, games and anime I'd like to share.  </p>
         <HobbieList />
       </GenContainer>
 

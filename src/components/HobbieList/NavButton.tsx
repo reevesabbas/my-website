@@ -11,7 +11,7 @@ const NavButton: React.FC<Props> = ({children, onClick, addStyle, ...rest}) => {
   return (
     <button 
       onClick={onClick}
-      className={`${addStyle} dark:border-lighterGray border-lightGray text-lightGray
+      className={`${addStyle} dark:border-lighterGray border-lightGray
       px-4 py-[3px] rounded-md font-fjalla text-lg duration-200 ease-in-out`}
       >
       {children}

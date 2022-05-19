@@ -1,7 +1,9 @@
 import { useTheme } from 'next-themes';
 import React, { useMemo, useState } from 'react'
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io'
-import {VscGithub} from 'react-icons/vsc'
+import { VscGithub } from 'react-icons/vsc'
+import { animated, useSpring } from 'react-spring';
+
 import IconButton from './Buttons/IconButton';
 
 const PROJECTS = [
@@ -17,44 +19,56 @@ const PROJECTS = [
     title: 'React TS Website',
     icons: {icon: VscGithub,
     link: ''},
-    body: `My first experience creating a website was great. Tailwind is the best styling framework I've worked with. And even with my limited experience- I believe it will retain that title as I
-    continue to grow as a developer.`,
+    body: `Making my own website made the most sense to practice React more, and learn Tailwind. And both are great tools that
+            only inspire my `,
   }
 ]
 
-let count = 0;
+let currIndex = 0;
 
 const Carousel = () => {
 
   const {theme, setTheme} = useTheme();
   const [currIndex, setCurrIndex] = useState(0);
   const { name, title, icons, body } = useMemo(() => PROJECTS[currIndex], [currIndex])
+  const [styles, api] = useSpring(() => {})
 
-  const handleNextClick = () => { count = (count+1) % PROJECTS.length
-    setCurrIndex(count);
-  }
-  const handlePrevClick = () => { 
+  const handleClick = ((r: boolean) => {
+    
     const length = PROJECTS.length;
-    count = (currIndex + length - 1) % length;
-    setCurrIndex(count);
-  }
+    if (r) {
+      setCurrIndex((currIndex) => (currIndex + 1) % length);
+    } else {
+      setCurrIndex((currIndex) => (currIndex + length - 1) % length);
+    }
+    api({
+      from: {
+        opacity: 0,
+      },
+      to: {
+        opacity: 1,
+      }
+    })
+  })
 
   return (
     <div className='mt-6 w-full h-fit select-none relative dark:bg-[#1d173b] bg-lightestPurple rounded-xl drop-shadow-lg'>
 
       <div className='absolute align-top w-full flex justify-between top-1/2 items-center opacity-100'>
-        <button onClick={handlePrevClick} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoIosArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
-        <button onClick={handleNextClick} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoIosArrowDroprightCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`}/> </button>
+        <button onClick={() => handleClick(false)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoIosArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
+        <button onClick={() => handleClick(true)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoIosArrowDroprightCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`}/> </button>
       </div>
 
-      <div className='duration-200 ease-linear h-fit flex flex-col space-y-4 items-end md:mx-20 mx-16 py-7 md:text-right text-center'>
+      <animated.div
+        style={styles}
+       className='h-fit flex flex-col space-y-4 items-end sm:mx-20 mx-10 py-7 md:text-right text-center'>
         <h2 className='w-full text-2xl md:text-3xl'> {name} </h2>
         <div className='flex flex-row md:justify-end justify-center space-x-4 w-full'>
           <IconButton Icon={icons.icon} size={30}/>
           <h3> {title} </h3>
         </div>
         <p> {body} </p>
-      </div>
+      </animated.div>
 
       <div className='flex absolute justify-center mx-auto flex-row space-x-1.5 w-full h-4 pt-3'>
         {PROJECTS.map((el, index) => (

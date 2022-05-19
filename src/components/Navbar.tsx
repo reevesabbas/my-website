@@ -54,7 +54,7 @@ const Navbar: React.FC<Props> = () => {
 
       {/**Mobile Nav */}
       
-      <div className={!menu ? 'hidden' : 'md:hidden absolute top-0 left-0 w-full h-screen bg-lightPurple dark:bg-darkPurple flex flex-col justify-center items-center'}>
+      <div className={!menu ? 'hidden' : 'md:hidden absolute top-0 left-0 w-full min-h-screen bg-lightPurple dark:bg-darkPurple flex flex-col justify-center items-center'}>
         <div className='flex flex-col space-y-9 text-center'>
           <a href='#home'> <TextButton onClick={() => setMenu(false)}> HOME </TextButton></a>
           <a className='pb-3'> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>

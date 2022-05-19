@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 html {
-  scroll-padding-top: 90px;
+  scroll-padding-top: 100px;
 }
 
 body {
-  @apply flex flex-col items-center dark:bg-darkestPurple bg-lightestPurple min-h-screen min-w-full;
+  @apply flex flex-col items-center dark:bg-darkestPurple bg-lightestPurple min-h-fit min-w-fit;
 }
 
 section {
-  @apply p-7 md:p-0 md:py-7
+  @apply my-14 md:p-0
   
 }
 
@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  @apply font-amiri text-xl font-semibold dark:font-medium leading-9;
+  @apply font-amiri text-xl font-semibold dark:font-medium leading-loose;
 }
 
 form input, form textarea {
@@ -39,7 +39,7 @@ form input, form textarea {
 
 @layer components {
   .content-container {
-    @apply h-[500px] w-full px-6 md:w-[1000px] md:px-0;
+    @apply h-[500px] px-3 w-full md:w-[1000px] md:px-0;
   }
 }
 

@@ -29,7 +29,7 @@ module.exports = {
     extend: {
       screens: {
         md: '1050px',
-        sm: '875px'
+        sm: '675px'
       },
       fontFamily: {
         yeseva: 'Yeseva One',
