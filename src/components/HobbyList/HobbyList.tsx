@@ -33,7 +33,7 @@ const HobbieList = () => {
       </nav>
       
       <animated.div 
-        className={`justify-center mx-7`}
+        className={`justify-center mx-7 overflow-hidden`}
         style={panelAnim}
       >
         <ListItem hobby={currHobby} w={200} h={imageHeight}/>
