@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 
-import ListItem from './ListItem'
+import ListItem from './HobbyCarousel'
 import NavButton from './NavButton'
 import IconButton from '../Buttons/IconButton'
 import { GAMES, ANIME, ALBUMS } from '../../assets/Hobbies'
