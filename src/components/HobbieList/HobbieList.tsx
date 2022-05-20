@@ -19,25 +19,14 @@ const HobbieList = () => {
         <div className='flex justify-start w-full h-8'>
           <IconButton Icon={IoIosArrowDown} size={35} onClick={() => {setShowHobbies(!showHobbies)}} addStyle={`${!showHobbies ? 'rotate-0' : '-rotate-180'}`} />
         </div>
-        <NavButton onClick={() => setCurrHobby(ALBUMS)} addStyle={`${currHobby === ALBUMS ? 'dark:bg-darkOrange bg-darkBlue border-0 text-white scale-110 dark:text-white' : 'dark:text-lighterGray hover:scale-[5px] scale-90 border-[1.5px] text-lightGray'}`}> MUSIC </NavButton>
-        <NavButton onClick={() => setCurrHobby(GAMES)} addStyle={`${currHobby === GAMES ? 'dark:bg-darkOrange bg-darkBlue border-0 text-white scale-110 dark:text-white' : 'dark:text-lighterGray hover:scale-[5px] scale-90 border-[1.5px] text-lightGray'}`}> GAMES </NavButton>
-        <NavButton onClick={() => setCurrHobby(ANIME)} addStyle={`${currHobby === ANIME ? 'dark:bg-darkOrange bg-darkBlue border-0 text-white scale-110 dark:text-white' : 'dark:text-lighterGray hover:scale-[5px] scale-90 border-[1.5px] text-lightGray'}`}> ANIME </NavButton>
+        <NavButton onClick={() => setCurrHobby(ALBUMS)} active={currHobby === ALBUMS ? true : false}> MUSIC </NavButton>
+        <NavButton onClick={() => setCurrHobby(GAMES)} active={currHobby === GAMES ? true : false}> GAMES </NavButton>
+        <NavButton onClick={() => setCurrHobby(ANIME)} active={currHobby === ANIME ? true : false}> ANIME </NavButton>
       </nav>
       
       <div className={`justify-center mx-7 mb-7 ${ !showHobbies ? 'hidden' : 'flex'}`}>
 
-        <div className={`${currHobby === ALBUMS ? 'block h-96' : 'hidden'}`}>
-          <ListItem hobby={ALBUMS} w={200} h={200} />
-        </div>
-
-        <div className={`${currHobby === GAMES ? 'block h-96' : 'hidden'}`}>
-          <ListItem hobby={GAMES} w={200} h={200}/>
-        </div>
-
-
-        <div className={`${currHobby === ANIME ? 'block h-[480px]' : 'hidden'}`}>
-          <ListItem hobby={ANIME} w={200} h={300} />
-        </div>
+      <ListItem hobby={currHobby} w={200} h={currHobby === ANIME ? 300 : 200} />
 
       </div>
     </div>
