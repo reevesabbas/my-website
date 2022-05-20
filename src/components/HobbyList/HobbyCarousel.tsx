@@ -1,8 +1,8 @@
 import { useTheme } from 'next-themes';
-import Image, { StaticImageData } from 'next/image';
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import Image from 'next/image';
+import React, {  useMemo, useState } from 'react'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io';
-import { interpolate, useSpring, animated, useSprings, useTransition, to } from 'react-spring'
+import { interpolate, animated, useSprings, } from 'react-spring'
 
 import { Hobby } from '../../assets/Hobbies'
 
@@ -45,39 +45,42 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
   };
 
   return (
-    <div className='w-full'>
-      <div className={`flex flex-col my-10 text-center justify-center items-center w-full`}>
-        <div className={`overflow-hidden w-full relative flex flex-row justify-center items-center mt-5`}
-          style={{height: h * 1.2}}>
-          {props.map(({scale, blur, left, opacity}, i) => (
-            <animated.div
-              style={{
-                position: 'absolute',
-                opacity,
-                transform: interpolate([left, scale], trans),
-                filter: blur.to((v: Number) => `blur(${v}px)`),
-              }}
-              key={`hobby-carousel-${hobby[i].name}-${i}`}
-            >
-              {/**Look into lazy loading images and add image alt props*/}
-              <a href={link} target='_blank' rel='noopener noreferrer'>
-                <Image
-                  alt={`${hobby[i].name} from hobby carousel`}
-                  src={hobby[i].img}
-                  width={w} 
-                  height={h} 
-                  layout='fixed'
-                  className='rounded-sm'
-                  />
-              </a>
-            </animated.div>
-          ))}
-        </div>
-        <h4 className='font-yeseva text-lg pt-7 w-48 '> {`'${name}'`} </h4>
-        <h4 className='font-yeseva text-sm pt-2 text-lightGray w-48'> {author} </h4>
+    <div className={`flex flex-col text-center justify-center items-center w-full `}>
+      <div className={`overflow-hidden w-full relative flex flex-row justify-center items-center mt-10`}
+        style={{height: h * 1.2}}>
+        {props.map(({scale, blur, left, opacity}, i) => (
+          <animated.div
+            style={{
+              position: 'absolute',
+              opacity,
+              transform: interpolate([left, scale], trans),
+              filter: blur.to((v: Number) => `blur(${v}px)`),
+            }}
+            key={`hobby-carousel-${hobby[i].name}-${i}`}
+          >
+            {/**Look into lazy loading images and add image alt props*/}
+            <a href={link} target='_blank' rel='noopener noreferrer'>
+              <Image
+                alt={`${hobby[i].name} from hobby carousel`}
+                src={hobby[i].img}
+                width={w} 
+                height={h} 
+                layout='fixed'
+                className='rounded-sm'
+                />
+            </a>
+          </animated.div>
+        ))}
       </div>
+      <animated.div className='w-48 h-20'
+      style={{
+        
+      }}>
+        <h4 className='font-yeseva text-lg mt-7'> {`'${name}'`} </h4>
+        <h4 className='font-yeseva text-sm pt-2 text-lightGray'> {author} </h4>
+      </animated.div>
 
-      <div className='absolute inset-x-0 bottom-[50px] flex justify-between mx-auto md:w-80 sm:w-1/2 w-3/4 mb-5'>
+      <div className='flex justify-between md:w-1/3 w-3/4'>
         <button onClick={() => handleClick(-1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
         <button onClick={() => handleClick(1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDroprightCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`}/> </button>
       </div>

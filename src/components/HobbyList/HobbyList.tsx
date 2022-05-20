@@ -1,16 +1,24 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 
 import ListItem from './HobbyCarousel'
 import NavButton from './NavButton'
 import IconButton from '../Buttons/IconButton'
 import { GAMES, ANIME, ALBUMS } from '../../assets/Hobbies'
+import { useSpring, animated } from 'react-spring'
+
 
 const HobbieList = () => {
-
+  
   const [showHobbies, setShowHobbies] = useState(false);
   const [currHobby, setCurrHobby] = useState(ALBUMS);
+  const imageHeight = (currHobby === ANIME ? 300: 200)
+  const animHeight = (currHobby === ANIME ? 550 : 450)
 
+  const panelAnim = useSpring({
+    height: showHobbies ? animHeight: 0,
+    opacity: showHobbies ? 1 : 0,
+  })
 
   return (
     <div className='divide-y divide-lightGray dark:bg-[#1d173b] bg-lightestPurple rounded-md drop-shadow-lg'>
@@ -24,11 +32,12 @@ const HobbieList = () => {
         <NavButton onClick={() => setCurrHobby(ANIME)} active={currHobby === ANIME ? true : false}> ANIME </NavButton>
       </nav>
       
-      <div className={`justify-center mx-7 mb-7 ${ !showHobbies ? 'hidden' : 'flex'}`}>
-
-      <ListItem hobby={currHobby} w={200} h={currHobby === ANIME ? 300 : 200} />
-
-      </div>
+      <animated.div 
+        className={`justify-center mx-7`}
+        style={panelAnim}
+      >
+        <ListItem hobby={currHobby} w={200} h={imageHeight}/>
+      </animated.div>
     </div>
   )
 }
