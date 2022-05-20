@@ -18,9 +18,8 @@ const PROJECTS = [
     name: 'Personal Website',
     title: 'React TS Website',
     icons: {icon: VscGithub,
-    link: ''},
-    body: `Making my own website made the most sense to practice React more, and learn Tailwind. And both are great tools that
-            only inspire my `,
+    link: 'https://github.com/reevesabbas/my-website'},
+    body: `Making my own website made the most sense to practice React, and learn Tailwind. And both are great tools that make me want to focus on front-end development more.`,
   }
 ]
 
@@ -64,7 +63,11 @@ const Carousel = () => {
        className='h-fit flex flex-col space-y-4 items-end sm:mx-20 mx-10 py-7 md:text-right text-center'>
         <h2 className='w-full text-2xl md:text-3xl'> {name} </h2>
         <div className='flex flex-row md:justify-end justify-center space-x-4 w-full'>
-          <IconButton Icon={icons.icon} size={30}/>
+        <a
+        href='https://github.com/reevesabbas/my-website'
+        target='_blank'
+        rel='noopener noreferrer'
+        > <IconButton Icon={icons.icon} size={30}/> </a>
           <h3> {title} </h3>
         </div>
         <p> {body} </p>
