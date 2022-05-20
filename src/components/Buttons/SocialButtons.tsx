@@ -14,13 +14,17 @@ const SocialButtons = () => {
         </a>
         <a
         href='https://github.com/reevesabbas'
-        target='_blank'>
+        target='_blank'
+        rel='noopener noreferrer'
+        >
           <IconButton Icon={GrGithub} size={48}>
           </IconButton>
         </a>
         <a
         href='https://www.instagram.com/reeves.19/'
-        target='_blank'>
+        target='_blank'
+        rel='noopener noreferrer'
+        >
           <IconButton Icon={GrInstagram} size={45}>
           </IconButton>
         </a>
