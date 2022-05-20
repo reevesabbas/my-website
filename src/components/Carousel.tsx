@@ -72,7 +72,9 @@ const Carousel = () => {
 
       <div className='flex absolute justify-center mx-auto flex-row space-x-1.5 w-full h-4 pt-3'>
         {PROJECTS.map((el, index) => (
-          <div className={`w-2 h-2 rounded-full dark:bg-orange bg-blue ${currIndex === index ? 'opacity-100' : 'opacity-30'}`}/>
+          <div className={`w-2 h-2 rounded-full dark:bg-orange bg-blue ${currIndex === index ? 'opacity-100' : 'opacity-30'}`}
+          key={`projects-carousel-${PROJECTS[index].title}-${index}`}
+          />
         ))}
       </div>
     </div>

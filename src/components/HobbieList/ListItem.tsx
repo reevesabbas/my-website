@@ -57,6 +57,7 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
                 transform: interpolate([left, scale], trans),
                 filter: blur.to((v: Number) => `blur(${v}px)`),
               }}
+              key={`hobby-carousel-${hobby[i].name}-${i}`}
             >
               <Image
                 src={hobby[i].img}
