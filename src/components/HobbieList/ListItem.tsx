@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes';
 import Image, { StaticImageData } from 'next/image';
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io';
-import { useSpring, animated, useSprings } from 'react-spring'
+import { interpolate, useSpring, animated, useSprings, useTransition, to } from 'react-spring'
 
 import { Hobby } from '../../assets/Hobbies'
 
@@ -12,73 +12,70 @@ interface Props {
   h: number;
 }
 
+//Default animations for each hobby item.
+const getAnim = (i: number, current: number) => {
+  const isAround = i >= current - 1 && i <= current + 1;
+  const isActive = i === current;
+
+  return {
+    scale: (isActive ? 1.1 : isAround ? 0.75 : 0),
+    blur: (isActive ? 0 : 3),
+    opacity: isAround ? 1 : 0,
+    left: (current - i) * 250 * -1,
+  }
+}
+
+//helper function to inject string into css styling.
+const trans = (l:number, s:number) => `translateX(${l}px) scale(${s})`;
+
 const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
   
   const {theme, setTheme} = useTheme();
   const [currIndex, setCurrIndex] = useState(0);
-  const {name, author, img, link} = useMemo(() => hobby[currIndex], [currIndex])
+  const { name, author, img, link} = useMemo(() => hobby[currIndex], [currIndex, hobby])
   const length = useMemo(() => hobby.length, [hobby])
 
-  const [styles, api] = useSprings(4, i => ({
-    scale: i <= 1 ? 0.75 : 1.5,
-  })
-  );
+  const [props, api] = useSprings(
+    length,
+    i => ({ ...getAnim(i, currIndex) }), [currIndex]
+  )
 
-  const nextIndex = (currIndex + 1) % length;
-  const prevIndex = (currIndex + length - 1) % length;
-
-  const handleClick = ((r: boolean) => {
-    if (r) {
-      setCurrIndex((currIndex) => (currIndex + 1) % length);
-    } else {
-      setCurrIndex((currIndex) => (currIndex + length - 1) % length);
-    }
-  })
+  const handleClick = (update: number) => {
+    setCurrIndex((curr) => (curr + (update ? length : 0) + update) % length);
+  };
 
   return (
-    <div>
-
-      <div className='flex flex-row w-fit h-fit my-10'>
-
-          <ul className='flex flex-row md:space-x-6 items-center drop-shadow-xl h-fit blur-[2px] pt-9'>
-            <li className={`sm:block hidden`}> <Image src={hobby[prevIndex].img} width={w / 1.5} height={h / 1.5} layout='fixed' /> </li>
-          </ul>
-
-        <div className='flex flex-col max-w-[200px] space-y-5 items-center text-center h-fit sm:mx-7 z-10'>
-          <a
-            href={link}
-            target='_blank'
-            >
+    <div className='w-full'>
+      <div className={`flex flex-col my-10 text-center justify-center items-center w-full`}>
+        <div className={`overflow-hidden w-full relative flex flex-row justify-center items-center mt-5`}
+          style={{height: h * 1.2}}>
+          {props.map(({scale, blur, left, opacity}, i) => (
             <animated.div
-            style={styles[0]}>
-              <Image 
-                src={img}
+              style={{
+                position: 'absolute',
+                opacity,
+                transform: interpolate([left, scale], trans),
+                filter: blur.to((v: Number) => `blur(${v}px)`),
+              }}
+            >
+              <Image
+                src={hobby[i].img}
                 width={w} 
                 height={h} 
                 layout='fixed'
                 className='rounded-sm'
-                />
-              </animated.div>
-            <h4 className='font-yeseva text-lg pt-7'> {`'${name}'`} </h4>
-            <h4 className='font-yeseva text-sm pt-2 text-lightGray'> {author} </h4>
-          </a>
+              />
+            </animated.div>
+          ))}
         </div>
-
-          <ul
-            className='flex flex-row md:space-x-6 items-center drop-shadow-xl h-fit blur-[2px] pt-9'
-          >
-            <animated.li 
-            style={{}}
-            className='sm:block hidden'> <Image src={hobby[nextIndex].img} width={w / 1.5} height={h / 1.5} layout='fixed' /> </animated.li>
-          </ul>
-        
+        <h4 className='font-yeseva text-lg pt-7 w-48 '> {`'${name}'`} </h4>
+        <h4 className='font-yeseva text-sm pt-2 text-lightGray w-48'> {author} </h4>
       </div>
 
-        <div className='absolute inset-x-0 bottom-[50px] flex justify-between mx-auto md:w-80 sm:w-1/2 w-3/4 mb-5'>
-          <button onClick={() => handleClick(false)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
-          <button onClick={() => handleClick(true)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDroprightCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`}/> </button>
-        </div>
-
+      <div className='absolute inset-x-0 bottom-[50px] flex justify-between mx-auto md:w-80 sm:w-1/2 w-3/4 mb-5'>
+        <button onClick={() => handleClick(-1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
+        <button onClick={() => handleClick(1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDroprightCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`}/> </button>
+      </div>
     </div>
   )
 }
