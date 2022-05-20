@@ -23,8 +23,8 @@ const Home: NextPage = () => {
           <h1> Reeves Abbas</h1>
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
           <p className='text-center md:text-left'> Hey, welcome to my personal website; developed with 
-          NextJS, Typescript and Tailwind CSS. I'm a 20 year old student majoring in Software Engineering at the University of Michigan in the US.
-          I'm always seeking more opportunities to nurture my talents and use them for creating software I am
+          NextJS, Typescript and Tailwind CSS. I&apos;m a 20 year old student majoring in Software Engineering at the University of Michigan in the US.
+          I&apos;m always seeking more opportunities to nurture my talents and use them for creating software I am
           proud of. Thank you for visiting, I hope you like what you see!
           </p>
           <SocialButtons />
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
       {/* Interests Container */}
 
       <GenContainer id='interests' title='Interests/Hobbies' icon={<FcFilmReel size={40}/>}>
-        <p> Here are some of my favorite music, games and anime I'd like to share.  </p>
+        <p> Here are some of my favorite music, games and anime I&apos;d like to share.  </p>
         <HobbieList />
       </GenContainer>
 
