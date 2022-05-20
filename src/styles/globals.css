@@ -43,7 +43,6 @@ form input, form textarea {
   }
 }
 
-
 @layer base {
   @font-face {
     font-family: 'Amiri-Regular';

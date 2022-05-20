@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useTheme } from 'next-themes';
 import { FaBars, FaCloudMoon } from 'react-icons/fa'
 import { BsFillSunFill } from 'react-icons/bs'

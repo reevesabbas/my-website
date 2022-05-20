@@ -1,7 +1,4 @@
-import React, { useState } from 'react'
-
-import { Hobby } from '../../assets/Hobbies'
-
+import React  from 'react'
 interface Props {
   children?: React.ReactNode;
   onClick?: (param?: any) => void;
@@ -9,7 +6,6 @@ interface Props {
 }
 
 const NavButton: React.FC<Props> = ({children, onClick, active, ...rest}) => {
-  //dark:focus:bg-darkOrange focus:bg-darkBlue focus:border-0 dark:focus:text-white focus:text-white focus:scale-110
   return (
     <button 
       onClick={onClick}
