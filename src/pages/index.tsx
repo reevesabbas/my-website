@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 import GenContainer from '../components/GenContainer';
 import SocialButtons from '../components/Buttons/SocialButtons';
 import ContactForm from '../components/ContactForm';
-import HobbieList from '../components/HobbieList/HobbieList';
+import HobbieList from '../components/HobbyList/HobbyList';
 import Carousel from '../components/Carousel';
 
 const Home: NextPage = () => {
@@ -75,13 +75,16 @@ const Home: NextPage = () => {
       {/** What's Next Container */}
 
       <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}>
-        <p> Currently seeking employment </p>
+        <p> As I continue my work on current projects- I&apos;m always open to collaborations. I am also seeking employment, if you have any questions or you&apos;re interested
+          please contact me below.
+        </p>
       </GenContainer>
 
       {/* Interests Container */}
 
       <GenContainer id='interests' title='Interests/Hobbies' icon={<FcFilmReel size={40}/>}>
-        <p> Here are some of my favorite music, games and anime I&apos;d like to share.  </p>
+        <p> I&apos;d like to share some of my favorite music, games and anime. With a nice little animation that my mentor and friend, Kieran helped me with.
+           Check out some of his work <u> <a href='https://github.com/KieranVieira' target='_blank' rel='noopener noreferrer' > here.</a></u></p>
         <HobbieList />
       </GenContainer>
 
