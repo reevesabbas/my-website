@@ -4,21 +4,25 @@ import { IoIosArrowDown } from 'react-icons/io'
 import ListItem from './HobbyCarousel'
 import NavButton from './NavButton'
 import IconButton from '../Buttons/IconButton'
-import { GAMES, ANIME, ALBUMS } from '../../assets/Hobbies'
+import { HOBBIES, Hobby } from './assets'
 import { useSpring, animated } from 'react-spring'
 
 
 const HobbieList = () => {
   
-  const [showHobbies, setShowHobbies] = useState(false);
-  const [currHobby, setCurrHobby] = useState(ALBUMS);
-  const imageHeight = (currHobby === ANIME ? 300: 200)
-  const animHeight = (currHobby === ANIME ? 550 : 450)
+  const [showHobbies, setShowHobbies] = useState(true);
+  const [currHobby, setCurrHobby] = useState(HOBBIES.ALBUMS);
+  const imageHeight = (currHobby === HOBBIES.ANIME ? 300: 200)
+  const animHeight = (currHobby === HOBBIES.ANIME ? 550 : 450)
 
   const panelAnim = useSpring({
     height: showHobbies ? animHeight: 0,
     opacity: showHobbies ? 1 : 0,
   })
+
+  const handleNavClick = (Hobby: Hobby) => {
+    //setCurrHobby()
+  }
 
   return (
     <div className='divide-y divide-lightGray dark:bg-[#1d173b] bg-lightestPurple rounded-md drop-shadow-lg'>
@@ -27,9 +31,9 @@ const HobbieList = () => {
         <div className='flex justify-start w-full h-8'>
           <IconButton Icon={IoIosArrowDown} size={35} onClick={() => {setShowHobbies(!showHobbies)}} addStyle={`${!showHobbies ? 'rotate-0' : '-rotate-180'}`} />
         </div>
-        <NavButton onClick={() => setCurrHobby(ALBUMS)} active={currHobby === ALBUMS ? true : false}> MUSIC </NavButton>
-        <NavButton onClick={() => setCurrHobby(GAMES)} active={currHobby === GAMES ? true : false}> GAMES </NavButton>
-        <NavButton onClick={() => setCurrHobby(ANIME)} active={currHobby === ANIME ? true : false}> ANIME </NavButton>
+        <NavButton onClick={() => setCurrHobby(HOBBIES.ALBUMS)} active={currHobby === HOBBIES.ALBUMS ? true : false}> MUSIC </NavButton>
+        <NavButton onClick={() => setCurrHobby(HOBBIES.GAMES)} active={currHobby === HOBBIES.GAMES ? true : false}> GAMES </NavButton>
+        <NavButton onClick={() => setCurrHobby(HOBBIES.ANIME)} active={currHobby === HOBBIES.ANIME ? true : false}> ANIME </NavButton>
       </nav>
       
       <animated.div 
