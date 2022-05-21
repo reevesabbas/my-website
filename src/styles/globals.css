@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;700&family=Lora:ital,wght@1,700&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -44,13 +45,6 @@ form input, form textarea {
 }
 
 @layer base {
-  @font-face {
-    font-family: 'Amiri-Regular';
-    src: url('/fonts/Amiri-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
   @font-face {
     font-family: 'Fjalla-One';
     src: url('/fonts/Fjalla-One.woff2') format('woff2');
