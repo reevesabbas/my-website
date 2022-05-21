@@ -13,10 +13,19 @@ import Carousel from '../components/ProjectCarousel/Carousel';
 import SkillsList from '../components/Skills/SkillsList';
 import IconButton from '../components/Buttons/IconButton';
 import ScrollButton from '../components/Buttons/ScrollButton';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
     <div className='content-container'>
+
+      <Head>
+        <meta charSet='UTF-8' />
+        <meta name='application-name' content='reevesabbas.com' key='website name'/>
+        <meta name='author' content='Reeves Abbas | Full Stack Developer' key='title'/>
+        <meta name='description' content='Reeves Abbas is a Full-Stack Software Engineer that works with
+        numerous frameworks and languages such as- JS, CSS, HTML5 and React. Click to learn more.' key='description'/>
+      </Head>
 
       <Navbar />
 
