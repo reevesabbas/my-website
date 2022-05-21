@@ -33,9 +33,9 @@ const ScrollButton = () => {
   }, [])
 
   return (
-    <animated.div className={`relative rounded-full hover:bg-darkBlue`}
+    <animated.div className={`relative`}
     style={styles}>
-      <IconButton Icon={BsFillArrowUpCircleFill} size={60} addStyle='fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-[25px]'
+      <IconButton Icon={BsFillArrowUpCircleFill} size={60} addStyle='fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-5'
         onClick={scrollToTop}
       >
       </IconButton>
