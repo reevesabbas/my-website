@@ -4,10 +4,10 @@ import React, {  useMemo, useState } from 'react'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io';
 import { interpolate, animated, useSprings, } from 'react-spring'
 
-import { Hobby } from '../../assets/Hobbies'
+import { Hobby } from './assets'
 
 interface Props {
-  hobby: Array<Hobby>
+  hobby: Array<Hobby>;
   w: number;
   h: number;
 }
@@ -31,7 +31,7 @@ const trans = (l:number, s:number) => `translateX(${l}px) scale(${s})`;
 const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
   
   const {theme, setTheme} = useTheme();
-  const [currIndex, setCurrIndex] = useState(0);
+  const [currIndex, setCurrIndex] = useState(2);
   const { name, author, img, link} = useMemo(() => hobby[currIndex], [currIndex, hobby])
   const length = useMemo(() => hobby.length, [hobby])
 
@@ -54,13 +54,13 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
               position: 'absolute',
               opacity,
               transform: interpolate([left, scale], trans),
-              filter: blur.to((v: Number) => `blur(${v}px)`),
+              // filter: blur.to((v: Number) => `blur(${v}px)`),
             }}
             key={`hobby-carousel-${hobby[i].name}-${i}`}
           >
-            {/**Look into lazy loading images and add image alt props*/}
             <a href={link} target='_blank' rel='noopener noreferrer'>
               <Image
+                priority={true}
                 alt={`${hobby[i].name} from hobby carousel`}
                 src={hobby[i].img}
                 width={w} 
