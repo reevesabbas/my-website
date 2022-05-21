@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import type { NextPage } from 'next'
+import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { FcSupport, FcBriefcase, FcFeedback, FcFilmReel, FcPlanner } from 'react-icons/fc'
-import { SiTypescript, SiReact, SiStyledcomponents, SiTailwindcss, SiJest, SiExpress } from 'react-icons/si'
+import { SiHtml5, SiTypescript, SiReact, SiStyledcomponents, SiTailwindcss, SiJest, SiExpress } from 'react-icons/si'
 
-import Navbar from '../components/Navbar';
-import GenContainer from '../components/GenContainer';
+import Navbar from '../components/Navbar/Navbar';
+import GenContainer from '../components/GenContainer/GenContainer';
 import SocialButtons from '../components/Buttons/SocialButtons';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/ContactForm/ContactForm';
 import HobbieList from '../components/HobbyList/HobbyList';
-import Carousel from '../components/Carousel';
+import Carousel from '../components/ProjectCarousel/Carousel';
+import SkillsList from '../components/Skills/SkillsList';
+import IconButton from '../components/Buttons/IconButton';
+import ScrollButton from '../components/Buttons/ScrollButton';
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +22,7 @@ const Home: NextPage = () => {
 
       {/* Intro Container */}
 
-      <section id='home' className='flex sm:px-10 px-2 mt-[200px]'>
+      <section id='home' className='flex sm:px-10 px-2 sm:mt-[200px] mt-[150px]'>
         <div className='flex flex-col justify-end space-y-5 text-center md:text-left'>
           <h1> Reeves Abbas</h1>
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
@@ -36,32 +40,7 @@ const Home: NextPage = () => {
 
       <GenContainer id='skills' title={'Skills'} icon={<FcSupport size={40}/>}>
         <p> These are just some of the dev tools I feel most confident with to use in my projects. </p>
-          <ul className='flex flex-wrap text-center justify-center md:space-x-12 space-x-5 py-5'>
-            <li className='p-3'>
-              <SiTypescript size={80} fill='#007acc'/>
-              <p className='pt-4'> Typescript </p>
-            </li>
-            <li className='p-3'>
-              <SiJest size={80} fill='#a0444c'/>
-              <p className='pt-4'> Jest </p>
-            </li>
-            <li className='p-3'>
-              <SiExpress size={80} />
-              <p className='pt-4'> Express </p>
-            </li>
-            <li className='p-3'>
-              <SiStyledcomponents size={80} fill='#bd717d'/>
-              <p className='pt-4 text-lg'> Styled Comp. </p>
-            </li>
-            <li className='p-3'>
-              <SiReact size={80} fill='#61dbfb' />
-              <p className='pt-4'> React </p>
-            </li>
-            <li className='p-3'>
-              <SiTailwindcss size={80} fill='#34b4ec' />
-              <p className='pt-4'> Tailwind </p>
-            </li>
-          </ul>
+        <SkillsList size={80}/>
       </GenContainer>
 
 
@@ -72,20 +51,20 @@ const Home: NextPage = () => {
         <Carousel />
       </GenContainer>
 
-      {/** What's Next Container */}
-
-      <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}>
-        <p> As I continue my work on current projects- I&apos;m always open to collaborations. I am also seeking employment, if you have any questions or you&apos;re interested
-          please contact me below.
-        </p>
-      </GenContainer>
-
       {/* Interests Container */}
 
       <GenContainer id='interests' title='Interests/Hobbies' icon={<FcFilmReel size={40}/>}>
         <p> I&apos;d like to share some of my favorite music, games and anime. With a nice little animation that my mentor and friend, Kieran helped me with.
            Check out some of his work <u> <a href='https://github.com/KieranVieira' target='_blank' rel='noopener noreferrer' > here.</a></u></p>
         <HobbieList />
+      </GenContainer>
+
+      {/** What's Next Container */}
+
+      <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}>
+        <p> As I continue my work on current projects- I&apos;m always open to collaborations. I am also seeking employment, if you have any questions or you&apos;re interested
+          please contact me below.
+        </p>
       </GenContainer>
 
 
@@ -101,6 +80,7 @@ const Home: NextPage = () => {
         <p> Thanks again for visiting! :-) </p>
       </footer>
 
+      <ScrollButton />
 
     </div>
   )
