@@ -72,13 +72,10 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
           </animated.div>
         ))}
       </div>
-      <animated.div className='w-48 h-20'
-      style={{
-        
-      }}>
+      <div className='w-48 h-20'>
         <h4 className='font-yeseva text-lg mt-7'> {`'${name}'`} </h4>
         <h4 className='font-yeseva text-sm pt-2 text-lightGray'> {author} </h4>
-      </animated.div>
+      </div>
 
       <div className='flex justify-between md:w-1/3 w-3/4'>
         <button onClick={() => handleClick(-1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
