@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes';
 import { FaBars, FaCloudMoon } from 'react-icons/fa'
 import { BsFillSunFill } from 'react-icons/bs'
@@ -15,11 +15,28 @@ const Navbar: React.FC<Props> = () => {
 
   const [menu, setMenu] = useState(false);
   const {theme, setTheme} = useTheme();
+  const [shadow, setShadow] = useState(true);
   const handleClick = () => setMenu(!menu);
+
+  const toggleShadow = () => {
+    if (window.pageYOffset > 0) {
+      setShadow(false)
+    }
+    else {
+      setShadow(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleShadow)
+    return () => {
+      window.removeEventListener('scroll', toggleShadow)
+    }
+  }, [])
 
   return (
     <>
-      <div className='fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple z-10 drop-shadow-md dark:drop-shadow-none'>
+      <div className={`fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple z-10 ${!shadow ? 'drop-shadow-md' : 'drop-shadow-none'} dark:drop-shadow-none`}>
 
         {/** Nav */}
 
@@ -46,6 +63,7 @@ const Navbar: React.FC<Props> = () => {
 
 
       </div>
+      
         {/** Mobile Hamburger */}
 
         <div className='md:hidden fixed top-5 right-3 flex w-full justify-end pr-5 pt-2 z-20'>
@@ -55,6 +73,7 @@ const Navbar: React.FC<Props> = () => {
         </div>
 
         {/**Mobile Nav */}
+
         <div className={!menu ? 'hidden' : 'z-10 md:hidden fixed top-0 left-0 bottom-0 right-0 bg-lightPurple dark:bg-darkPurple flex flex-col justify-center items-center'}>
           <div className='flex flex-col space-y-9 text-center'>
             <a href='#home'> <TextButton onClick={() => setMenu(false)}> HOME </TextButton></a>
