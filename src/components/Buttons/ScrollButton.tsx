@@ -33,7 +33,7 @@ const ScrollButton = () => {
   }, [])
 
   return (
-    <animated.div className={`relative`}
+    <animated.div
     style={styles}>
       <IconButton Icon={BsFillArrowUpCircleFill} size={60} addStyle='fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-5'
         onClick={scrollToTop}
