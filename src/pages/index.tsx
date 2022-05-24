@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { FcSupport, FcBriefcase, FcFeedback, FcFilmReel, FcPlanner } from 'react-icons/fc'
 import { SiHtml5, SiTypescript, SiReact, SiStyledcomponents, SiTailwindcss, SiJest, SiExpress } from 'react-icons/si'
+import Head from 'next/head';
 
 import Navbar from '../components/Navbar/Navbar';
 import GenContainer from '../components/GenContainer/GenContainer';
@@ -13,7 +14,7 @@ import Carousel from '../components/ProjectCarousel/Carousel';
 import SkillsList from '../components/Skills/SkillsList';
 import IconButton from '../components/Buttons/IconButton';
 import ScrollButton from '../components/Buttons/ScrollButton';
-import Head from 'next/head';
+import favicon from '../../public/favicon.ico'
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +23,10 @@ const Home: NextPage = () => {
       <Head>
         <meta charSet='UTF-8' />
         <meta name='application-name' content='reevesabbas.com' key='website name'/>
-        <meta name='author' content='Reeves Abbas | Full Stack Developer' key='title'/>
-        <meta name='description' content='Reeves Abbas is a Full-Stack Software Engineer that works with
-        numerous frameworks and languages such as- JS, CSS, HTML5 and React. Click to learn more.' key='description'/>
+        <link rel='shortcut icon' href='/favicon.ico' />
+        <title> Reeves Abbas | Full Stack Developer </title>
+        <meta name='description' content='Reeves Abbas is a Developer that works with
+          numerous frameworks and languages such as- JS, CSS, HTML5 and React. Click here for more information.' key='description'/>
       </Head>
 
       <Navbar />
