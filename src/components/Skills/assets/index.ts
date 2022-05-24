@@ -9,7 +9,7 @@ type Skills = {
   fill: string,
 }
 
-const Skills = [
+const SKILLS = [
   { name: 'Typescript', icon: SiTypescript, link: 'https://www.typescriptlang.org/', fill: '#007acc', },
   { name: 'HTML5', icon: SiHtml5, link: 'https://developer.mozilla.org/en-US/docs/Web/HTML', fill: '#e34c26', },
   { name: 'React & React Native', icon: SiReact, link: 'https://reactjs.org/', fill: '#61dbfb', },
@@ -20,4 +20,5 @@ const Skills = [
   { name: 'NodeJs', icon: FaNodeJs, link: 'https://nodejs.org/en/', fill: '#3c873a', }
 ]
 
-export default Skills;
+export default SKILLS;
+export type {Skills};
