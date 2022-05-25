@@ -1,8 +1,6 @@
-import React, { createElement } from 'react';
+import React  from 'react';
 import type { NextPage } from 'next'
-import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { FcSupport, FcBriefcase, FcFeedback, FcFilmReel, FcPlanner } from 'react-icons/fc'
-import { SiHtml5, SiTypescript, SiReact, SiStyledcomponents, SiTailwindcss, SiJest, SiExpress } from 'react-icons/si'
 import Head from 'next/head';
 
 import Navbar from '../components/Navbar/Navbar';
@@ -12,9 +10,7 @@ import ContactForm from '../components/ContactForm/ContactForm';
 import HobbieList from '../components/HobbyList/HobbyList';
 import Carousel from '../components/ProjectCarousel/Carousel';
 import SkillsList from '../components/Skills/SkillsList';
-import IconButton from '../components/Buttons/IconButton';
 import ScrollButton from '../components/Buttons/ScrollButton';
-import favicon from '../../public/favicon.ico'
 
 const Home: NextPage = () => {
   return (

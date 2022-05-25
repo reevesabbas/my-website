@@ -24,8 +24,6 @@ const PROJECTS = [
   }
 ]
 
-let currIndex = 0;
-
 const Carousel = () => {
 
   const {theme, setTheme} = useTheme();
@@ -42,12 +40,8 @@ const Carousel = () => {
       setCurrIndex((currIndex) => (currIndex + length - 1) % length);
     }
     api({
-      from: {
-        opacity: 0,
-      },
-      to: {
-        opacity: 1,
-      }
+      from: { opacity: 0},
+      to: { opacity: 1 }
     })
   })
 

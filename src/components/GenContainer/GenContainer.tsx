@@ -1,7 +1,5 @@
 import React from 'react'
-import { GrGithub, GrInstagram, GrTwitter } from 'react-icons/gr'
-import { IconBaseProps, IconType } from 'react-icons/lib';
-import IconButton from '../Buttons/IconButton'
+import { IconBaseProps  } from 'react-icons/lib';
 
 interface Props {
   title: string;
