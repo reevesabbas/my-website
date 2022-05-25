@@ -19,8 +19,8 @@ const PROJECTS = [
     title: 'React TS Website',
     iconBtn: {icon: VscGithub,
       link: 'https://github.com/reevesabbas/my-website'},
-    body: `Making my own website made the most sense to practice React, and learn Tailwind. And both are great tools that make me want to focus on front-end development more;
-    until I tried making animations.`,
+    body: `Making my own website made the most sense to practice React, and learn Tailwind. Both are great tools that further guide my focus to front-end development more.
+    It was a very thought provoking and immersive challenge that I'm looking forward to face again.`,
   }
 ]
 
