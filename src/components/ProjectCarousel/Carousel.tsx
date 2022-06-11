@@ -10,7 +10,7 @@ const PROJECTS = [
   { name: 'Ergo',
     title: 'Task/Calendar App',
     iconBtn: {icon: VscGithub,
-      link: 'https://github.com/reevesabbas'},
+      link: 'https://github.com/Ergo-Tasks/ergo-api'},
     body: `App allows you to create a user, and login. Password is encrypted and JWT is used to authenticate. User's can create, delete, update, and view tasks.
     Tasks can have up to numerous tags attached for filtering/organization (Tags have CRUD operations as well).`
   },
