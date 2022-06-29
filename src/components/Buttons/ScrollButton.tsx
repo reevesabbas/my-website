@@ -7,7 +7,9 @@ const ScrollButton = () => {
 
   const [isVisible, setisVisible] = useState(false);
 
-  const styles = useSpring({ opacity: isVisible ? 1 : 0})
+  const styles = useSpring({ 
+    opacity: isVisible ? 1 : 0
+  })
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -33,9 +35,11 @@ const ScrollButton = () => {
   }, [])
 
   return (
-    <animated.div
-    style={styles}>
-      <IconButton Icon={BsFillArrowUpCircleFill} size={60} addStyle='fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-5'
+    <animated.div style={styles}>
+      <IconButton 
+        Icon={BsFillArrowUpCircleFill} 
+        size={60} 
+        addStyle='dark:bg-black bg-white rounded-full fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-5'
         onClick={scrollToTop}
       >
       </IconButton>

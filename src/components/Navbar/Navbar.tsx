@@ -19,7 +19,7 @@ const Navbar: React.FC<Props> = () => {
   const handleClick = () => setMenu(!menu);
 
   const toggleShadow = () => {
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > 50) {
       setShadow(false)
     }
     else {
@@ -74,7 +74,7 @@ const Navbar: React.FC<Props> = () => {
 
         {/**Mobile Nav */}
 
-        <div className={!menu ? 'hidden' : 'z-10 md:hidden fixed top-0 left-0 bottom-0 right-0 bg-lightPurple dark:bg-darkPurple flex flex-col justify-center items-center'}>
+        <div className={!menu ? 'hidden' : 'z-10 md:hidden fixed top-0 left-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-darkPurple flex flex-col justify-center items-center'}>
           <div className='flex flex-col space-y-9 text-center'>
             <a href='#home'> <TextButton onClick={() => setMenu(false)}> HOME </TextButton></a>
             <a className='pb-3'> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
