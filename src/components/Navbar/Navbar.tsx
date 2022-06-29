@@ -3,9 +3,10 @@ import { useTheme } from 'next-themes';
 import { FaBars, FaCloudMoon } from 'react-icons/fa'
 import { BsFillSunFill } from 'react-icons/bs'
 import { CgClose } from 'react-icons/cg'
+import { useSpring, animated as a } from 'react-spring';
+import Link from 'next/link';
 
 import TextButton from '../Buttons/TextButton'
-import Link from 'next/link';
 
 interface Props {
   children?: React.ReactNode
@@ -17,6 +18,12 @@ const Navbar: React.FC<Props> = () => {
   const {theme, setTheme} = useTheme();
   const [shadow, setShadow] = useState(true);
   const handleClick = () => setMenu(!menu);
+
+  const slideAnim = useSpring({
+    width: menu ? 100 : 0,
+    opacity: menu ? 1 : 0,
+    config: { duration: 225 }
+  })
 
   const toggleShadow = () => {
     if (window.pageYOffset > 50) {
@@ -74,19 +81,43 @@ const Navbar: React.FC<Props> = () => {
 
         {/**Mobile Nav */}
 
-        <div className={!menu ? 'hidden' : 'z-10 md:hidden fixed top-0 left-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-darkPurple flex flex-col justify-center items-center'}>
+        <a.div
+          className={`${menu ? '' : 'pointer-events-none'} overflow-hidden z-10 md:hidden fixed top-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-darkPurple flex flex-col justify-center items-center`}
+          style={{
+            width: slideAnim.width.to(v => `${v}%`),
+            opacity: slideAnim.opacity
+          }}
+        >
           <div className='flex flex-col space-y-9 text-center'>
-            <a href='#home'> <TextButton onClick={() => setMenu(false)}> HOME </TextButton></a>
-            <a className='pb-3'> <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-              {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
-            </TextButton></a>
-            <a href='#projects'> <TextButton onClick={() => setMenu(false)}> PROJECTS </TextButton> </a>
-            <a href='#contact'><TextButton onClick={() => setMenu(false)}> CONTACT </TextButton> </a>
+            <a href='#home'>
+              <TextButton onClick={() => setMenu(false)}> 
+                HOME 
+              </TextButton>
+            </a>
+            <a className='pb-3 w-48'> 
+              <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
+              </TextButton>
+            </a>
+            <a href='#projects'> 
+              <TextButton onClick={() => setMenu(false)}> 
+                PROJECTS 
+              </TextButton> 
+            </a>
+            <a href='#contact'>
+              <TextButton onClick={() => setMenu(false)}> 
+                CONTACT 
+              </TextButton> 
+            </a>
             <Link href='/Abbas_Reeves.pdf'> 
-              <a> <TextButton> RESUME </TextButton> </a>
+              <a> 
+                <TextButton> 
+                  RESUME 
+                </TextButton> 
+              </a>
             </Link> 
           </div>
-        </div>
+        </a.div>
     </>
   )
 }
