@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { FaNodeJs } from "react-icons/fa";
-import { SiExpress, SiHtml5, SiJest, SiReact, SiStyledcomponents, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiRedux, SiHtml5, SiJest, SiReact, SiStyledcomponents, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 type Skills = {
   name: string,
@@ -16,7 +16,7 @@ const SKILLS = [
   { name: 'Tailwind', icon: SiTailwindcss, link: 'https://tailwindcss.com/', fill: '#34b4ec', },
   { name: 'Jest', icon: SiJest, link: 'https://jestjs.io/docs/getting-started', fill: '#b6434d', },
   { name: 'Styled Components', icon: SiStyledcomponents, link: 'https://styled-components.com/', fill: '#d97d8b', },
-  { name: 'Express', icon: SiExpress, link: 'https://expressjs.com/', fill: '#808080', },
+  { name: 'Redux', icon: SiRedux, link: 'https://react-redux.js.org/', fill: '#784cbc', },
   { name: 'NodeJs', icon: FaNodeJs, link: 'https://nodejs.org/en/', fill: '#3c873a', }
 ]
 
