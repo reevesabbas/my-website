@@ -11,8 +11,8 @@ const PROJECTS = [
     title: 'Task/Calendar App',
     iconBtn: {icon: VscGithub,
       link: 'https://github.com/Ergo-Tasks/ergo-api'},
-    body: `App allows you to create a user, and login. Password is encrypted and JWT is used to authenticate. User's can create, delete, update, and view tasks.
-    Tasks can have up to numerous tags attached for filtering/organization (Tags have CRUD operations as well).`
+    body: `App created through test-driven development using Jest. Express used for Restful API with CRUD operations on User, Task, and Tags. TypeORM used to manage data relations, and 
+    JWT used for authentication; Users can sign up and login.`
   },
   {
     name: 'Personal Website',
