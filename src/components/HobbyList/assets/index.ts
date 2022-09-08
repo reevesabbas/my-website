@@ -9,12 +9,12 @@ interface Hobby {
 
 const HOBBIES = {
   ALBUMS: [
-    { name: 'By Swallow Season', img: '/hobbies/music/SwallowSeason.svg', author: 'Shintaro Sakamoto', link: 'https://open.spotify.com/track/1QqSrqSjMqnwOjg2xkHRVM?si=197faa6ce6b149a8' },
-    { name: 'Swimming',author: 'Mac Miller',img: '/hobbies/music/Swimming.svg',link: 'https://open.spotify.com/album/5wtE5aLX5r7jOosmPhJhhk?si=4Obax3wJQPCuxNMyFmAEkA', },
-    { name: 'KIDS SEE GHOSTS',author: 'Kanye West & Kid Cudi',img: '/hobbies/music/KSG.svg',link: 'https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV?si=fpZsfE-1QiagZKRDiAINug', },
     { name: 'Call Me If You Get Lost',author: 'Tyler, the Creator',img: '/hobbies/music/CMIYGL.svg',link: 'https://open.spotify.com/album/45ba6QAtNrdv6Ke4MFOKk9?si=Ug8Nnn71SbWEbN049DO1Jw'},
+    { name: 'KIDS SEE GHOSTS',author: 'Kanye West & Kid Cudi',img: '/hobbies/music/KSG.svg',link: 'https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV?si=fpZsfE-1QiagZKRDiAINug', },
+    { name: 'Swimming',author: 'Mac Miller',img: '/hobbies/music/Swimming.svg',link: 'https://open.spotify.com/album/5wtE5aLX5r7jOosmPhJhhk?si=4Obax3wJQPCuxNMyFmAEkA', },
+    { name: 'The Forever Story',author: 'J.I.D',img: '/hobbies/music/TFS.svg',link: 'https://open.spotify.com/album/3QVjpIxcksDkJmOnvlOJjg?si=w5AS5gJgRSuzF2NoccKUCQ'},
+    { name: 'By Swallow Season', img: '/hobbies/music/SwallowSeason.svg', author: 'Shintaro Sakamoto', link: 'https://open.spotify.com/track/1QqSrqSjMqnwOjg2xkHRVM?si=197faa6ce6b149a8' },
     { name: 'good kid, m.A.A.d city',author: 'Kendrick Lamar',img: '/hobbies/music/GKMC.svg',link: 'https://open.spotify.com/album/3DGQ1iZ9XKUQxAUWjfC34w?si=cndTDW8fTP-KH6IDGcOjQw'},
-    { name: 'Graduation',author: 'Kanye West',img: '/hobbies/music/Graduation.svg',link: 'https://open.spotify.com/album/4SZko61aMnmgvNhfhgTuD3?si=263d41067b8a4a16'}
 ], 
   GAMES: [
     {name: 'DARK SOULS III',author: 'FromSoftware',img: '/hobbies/games/ds3.svg',link: 'https://store.steampowered.com/app/374320/DARK_SOULS_III/',},
