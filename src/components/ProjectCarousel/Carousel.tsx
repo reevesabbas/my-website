@@ -8,7 +8,7 @@ import IconButton from '../Buttons/IconButton';
 
 const PROJECTS = [
   { name: 'Ergo',
-    title: 'Task/Calendar App',
+    title: 'Task App Api',
     iconBtn: {icon: VscGithub,
       link: 'https://github.com/Ergo-Tasks/ergo-api'},
     body: `App created through test-driven development using Jest. Express used for Restful API with CRUD operations on User, Task, and Tags. TypeORM used to manage data relations, and 
@@ -16,12 +16,12 @@ const PROJECTS = [
   },
   {
     name: 'Personal Website',
-    title: 'React TS Website',
+    title: 'React NextJS Website',
     iconBtn: {icon: VscGithub,
       link: 'https://github.com/reevesabbas/my-website'},
     body: `Making my own website made the most sense to practice React, and learn Tailwind. Both are great tools that further guide my focus to front-end development more.
     It was a very thought provoking and immersive challenge that I'm looking forward to face again.`,
-  }
+  },
 ]
 
 const Carousel = () => {
