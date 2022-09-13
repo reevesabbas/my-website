@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import React, {  useMemo, useState } from 'react'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io';
-import { interpolate, animated, useSprings, } from 'react-spring'
+import { to, animated, useSprings, } from 'react-spring'
 
 import { Hobby } from './assets'
 
@@ -53,7 +53,7 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
             style={{
               position: 'absolute',
               opacity,
-              transform: interpolate([left, scale], trans),
+              transform: to([left, scale], trans),
               // filter: blur.to((v: Number) => `blur(${v}px)`),
             }}
             key={`hobby-carousel-${hobby[i].name}-${i}`}
