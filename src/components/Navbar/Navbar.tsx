@@ -43,7 +43,7 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <>
-      <div className={`fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestPurple z-10 ${!shadow ? 'drop-shadow-md' : 'drop-shadow-none'} dark:drop-shadow-none`}>
+      <div className={`fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestGray z-10 ${!shadow ? 'drop-shadow-md' : 'drop-shadow-none'} dark:drop-shadow-none`}>
 
         {/** Nav */}
 
@@ -82,7 +82,7 @@ const Navbar: React.FC<Props> = () => {
         {/**Mobile Nav */}
 
         <a.div
-          className={`${menu ? '' : 'pointer-events-none'} overflow-hidden z-10 md:hidden fixed top-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-darkPurple flex flex-col justify-center items-center`}
+          className={`${menu ? '' : 'pointer-events-none'} overflow-hidden z-10 md:hidden fixed top-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-gray flex flex-col justify-center items-center`}
           style={{
             width: slideAnim.width.to(v => `${v}%`),
             opacity: slideAnim.opacity

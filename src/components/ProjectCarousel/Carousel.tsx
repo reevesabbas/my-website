@@ -46,7 +46,7 @@ const Carousel = () => {
   })
 
   return (
-    <div className='mt-6 w-full h-fit select-none relative dark:bg-[#1d173b] bg-lightestPurple rounded-xl drop-shadow-lg'>
+    <div className='mt-6 w-full h-fit select-none relative dark:bg-gray bg-lightestPurple rounded-xl drop-shadow-lg'>
 
       <div className='absolute align-top w-full flex justify-between top-1/2 items-center opacity-100'>
         <button onClick={() => handleClick(false)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoIosArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>

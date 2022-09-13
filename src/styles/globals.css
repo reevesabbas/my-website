@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  @apply flex flex-col items-center dark:bg-darkestPurple bg-lightestPurple min-h-fit min-w-fit;
+  @apply flex flex-col items-center dark:bg-darkestGray bg-lightestPurple min-h-fit min-w-fit;
 }
 
 section {
