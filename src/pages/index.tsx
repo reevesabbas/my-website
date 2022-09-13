@@ -33,10 +33,11 @@ const Home: NextPage = () => {
         <div className='flex flex-col justify-end space-y-5 text-center md:text-left'>
           <h1> Reeves Abbas</h1>
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
-          <p className='text-center md:text-left'> Hey, welcome to my personal website; developed with 
-          NextJS, Typescript and Tailwind CSS. I&apos;m a 20 year old student majoring in Software Engineering at the University of Michigan in the US.
-          I&apos;m always seeking more opportunities to nurture my talents and use them for creating software I am
-          proud of. Thank you for visiting, I hope you like what you see!
+          <p className='text-center md:text-left'> 
+            Hey, welcome to my personal website; developed with 
+            NextJS, Typescript and Tailwind CSS. I&apos;m a 20 year old developer working with React Native at the moment.
+            My current goal is to practice, and to do so I would love to connect with other devs and collaborate.
+            This website will overview my skill set and more; contact me to talk and learn more.
           </p>
           <SocialButtons />
         </div>
@@ -45,46 +46,67 @@ const Home: NextPage = () => {
 
       {/* Skills Container */}
 
-      <GenContainer id='skills' title={'Skills'} icon={<FcSupport size={40}/>}>
-        <p> These are just some of the dev tools I feel most confident with to use in my projects. </p>
+      <GenContainer 
+        id='skills'   
+        title={'Skills'} 
+        icon={<FcSupport size={40}/>}
+        body={'These are just some of the dev tools I feel most confident with to use in my projects.'}
+      >
         <SkillsList size={80}/>
       </GenContainer>
 
 
       {/* Projects Container */}
       
-      <GenContainer id='projects' title='Projects' icon={<FcBriefcase size={40}/>}>
-       <p> Here is a brief overview of some of the projects I have worked on. </p>
+      <GenContainer 
+        id='projects' 
+        title='Projects'  
+        icon={<FcBriefcase size={40}/>}
+        body='Here is a brief overview of some of the projects I have worked on.'
+      >
         <Carousel />
       </GenContainer>
 
       {/* Interests Container */}
 
-      <GenContainer id='interests' title='Interests/Hobbies' icon={<FcFilmReel size={40}/>}>
-        <p> I&apos;d like to share some of my favorite music, games and anime. With a nice little animation that my mentor and friend, Kieran helped me with.
-           Check out some of his work <u> <a href='https://github.com/KieranVieira' target='_blank' rel='noopener noreferrer' > here.</a></u></p>
+      <GenContainer 
+        id='interests' 
+        title='Interests/Hobbies' 
+        icon={<FcFilmReel size={40}/>}
+        body='I&apos;d like to share some of my favorite music, games and anime. With a nice little React Spring animation my mentor/friend Kieran helped me with.'
+      >
+        <a 
+          href='https://github.com/KieranVieira' 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='underline font-amiri text-lg'
+        > 
+          Check out some of his work here. 
+        </a>
         <HobbieList />
       </GenContainer>
 
       {/** What's Next Container */}
 
-      <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}>
-        <p> As I continue my work on current projects- I&apos;m always open to collaborations. I am also seeking employment, if you have any questions or you&apos;re interested
-          please contact me below.
-        </p>
+      <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}
+        body='As I continue my work on current projects- I&apos;m always open to collaborations. I am also seeking employment, if you have any questions or you&apos;re interested
+        please contact me below.'
+      >
       </GenContainer>
 
 
       {/* Contact Container */}
 
-      <GenContainer id='contact' title='Contact' icon={<FcFeedback size={40}/>}>
-        <p> Feel free to leave me a message here or email me at: <em className='select-all'> reeves.abbas@gmail.com </em> </p>
+      <GenContainer id='contact' title='Contact' icon={<FcFeedback size={40}/>}
+        body='Feel free to leave me a message here or email me at:'
+      >
+      <p className='italic underline select-all'> reeves.abbas@gmail.com </p>
         <ContactForm />
       </GenContainer>
 
       <footer className='h-full flex flex-col mx-auto justify-center items-center py-14 space-y-5'>
         <SocialButtons />
-        <p> Thanks again for visiting! :-) </p>
+        <p> Connect with me. </p>
       </footer>
 
       <ScrollButton />
