@@ -22,6 +22,13 @@ const PROJECTS = [
     body: `Making my own website made the most sense to practice React, and learn Tailwind. Both are great tools that further guide my focus to front-end development more.
     It was a very thought provoking and immersive challenge that I'm looking forward to face again.`,
   },
+  {
+    name: 'Journal App',
+    title: 'React Native Tailwind App',
+    iconBtn: {icon: VscGithub,
+    link: 'https://github.com/reevesabbas/journal'},
+    body: `Work in progress React Native app. Follow production with Github button above.`
+  }
 ]
 
 const Carousel = () => {
