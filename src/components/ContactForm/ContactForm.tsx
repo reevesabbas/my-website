@@ -9,10 +9,10 @@ const ContactForm = () => {
       action='https://app.headlessforms.cloud/api/v1/form-submission/l49D1dmrVN' 
       className='flex flex-col pt-7 space-y-5 drop-shadow-md'
     >
-      <input name='Name' placeholder='Name' required />
-      <input name='Email' placeholder='Email' required />
-      <input name='Subject' placeholder='Subject' required />
-      <textarea name='Message' placeholder='Message' required />
+      <input name='Name' placeholder='Name' className='dark:bg-gray' required/>
+      <input name='Email' placeholder='Email' className='dark:bg-gray' required />
+      <input name='Subject' placeholder='Subject' className='dark:bg-gray' required />
+      <textarea name='Message' placeholder='Message' className='dark:bg-gray' required />
       <FormBtn>
         SEND
       </FormBtn>
