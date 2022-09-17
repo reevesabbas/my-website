@@ -34,10 +34,9 @@ const Home: NextPage = () => {
           <h1> Reeves Abbas</h1>
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
           <p className='text-center md:text-left'> 
-            Hey, welcome to my personal website; developed with 
-            NextJS, Typescript and Tailwind CSS. I&apos;m a 20 year old developer working with React Native at the moment.
-            My current goal is to practice, and to do so I would love to connect with other devs and collaborate.
-            This website will overview my skill set and more; contact me to talk and learn more.
+            Hey, welcome to my website. I am currently working on personal projects to practice various libraries and packages that helped ignite my passion for creating
+            meaningful and effective software. I really enjoy using React and TailwindCSS to build maintainable easy-to-read code, implementing useful UI/UX features. 
+            Please look around or contact me to learn more and collaborate.
           </p>
           <SocialButtons />
         </div>
@@ -73,16 +72,8 @@ const Home: NextPage = () => {
         id='interests' 
         title='Interests/Hobbies' 
         icon={<FcFilmReel size={40}/>}
-        body='I&apos;d like to share some of my favorite music, games and anime. With a nice little React Spring animation my mentor/friend Kieran helped me with.'
+        body='I&apos;d like to share some of my favorite shows and music for those interested.'
       >
-        <a 
-          href='https://github.com/KieranVieira' 
-          target='_blank' 
-          rel='noopener noreferrer' 
-          className='underline font-amiri text-lg'
-        > 
-          Check out some of his work here. 
-        </a>
         <HobbieList />
       </GenContainer>
 
