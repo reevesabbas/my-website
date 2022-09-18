@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <h2 className='font-yeseva text-blue dark:text-orange text-2xl'> A Full Stack Developer </h2>
           <p className='text-center md:text-left'> 
             Hey, welcome to my website. I am currently working on personal projects to practice various libraries and packages that helped ignite my passion for creating
-            meaningful and effective software. I really enjoy using React and TailwindCSS to build maintainable easy-to-read code, implementing useful UI/UX features. 
+            maintainable software with purpose. I really enjoy using React and Tailwind CSS to build useful UI/UX features. 
             Please look around or contact me to learn more and collaborate.
           </p>
           <SocialButtons />
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         id='projects' 
         title='Projects'  
         icon={<FcBriefcase size={40}/>}
-        body='Here is a brief overview of some of the projects I have worked on.'
+        body='Here is a brief overview on some of the projects I have worked on.'
       >
         <Carousel />
       </GenContainer>

@@ -11,7 +11,7 @@ const PROJECTS = [
     title: 'Task App Api',
     iconBtn: {icon: VscGithub,
       link: 'https://github.com/Ergo-Tasks/ergo-api'},
-    body: `App created through test-driven development using Jest. Express used for Restful API with CRUD operations on User, Task, and Tags. TypeORM used to manage data relations, and 
+    body: `Developed with Jest testing framework. Express used for Restful API with CRUD operations on User, Task, and Tags. TypeORM used to manage data relations, and 
     JWT used for authentication; Users can sign up and login.`
   },
   {
