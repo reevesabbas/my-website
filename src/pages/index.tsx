@@ -80,8 +80,7 @@ const Home: NextPage = () => {
       {/** What's Next Container */}
 
       <GenContainer title={`What's Next?`} icon={<FcPlanner size={40}/>}
-        body='As I continue my work on current projects- I&apos;m always open to collaborations. I am also seeking employment, if you have any questions or you&apos;re interested
-        please contact me below.'
+        body='My next goal is almost always to find and implement best practices as I study and build code. Looking for area to improve is vital to me, and any feedback is appreciated greatly.'
       >
       </GenContainer>
 
