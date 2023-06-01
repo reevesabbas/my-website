@@ -8,10 +8,9 @@ import GenContainer from '../components/GenContainer';
 import SocialButtons from '../components/Buttons/SocialButtons';
 import ContactForm from '../components/ContactForm';
 import HobbieList from '../components/HobbyList/HobbyList';
-import Carousel from '../components/Carousel';
 import SkillsList from '../components/Skills/SkillsList';
 import ScrollButton from '../components/Buttons/ScrollButton';
-import { ProjectCard } from '../components/ProjectCard';
+import { ProjectGrid } from '../components/ProjectGrid';
 
 const Home: NextPage = () => {
   return (
@@ -35,8 +34,8 @@ const Home: NextPage = () => {
 
       <section id="home" className="flex sm:px-10 px-2 sm:mt-[200px] mt-[150px]">
         <div className="flex flex-col justify-end space-y-5 text-center md:text-left">
-          <h1> Hi, I'm Reeves Abbas,</h1>
-          <h2 className="text-blue dark:text-blue text-2xl"> A Software Engineer </h2>
+          <h1> Hey, I'm Reeves Abbas,</h1>
+          <h2 className="text-blue dark:text-blue text-3xl">Software Engineer</h2>
           <p className="text-center md:text-left">
             Welcome to my website! I am currently looking for employment as a software engineer, in the meantime I'm
             working on the projects listed below to expand my experience and stay passionate about developing. I am open
@@ -49,7 +48,7 @@ const Home: NextPage = () => {
       {/* Projects Container */}
 
       <GenContainer id="projects" title="Portfolio" icon={<FcBriefcase size={40} />}>
-        <Carousel />
+        <ProjectGrid />
       </GenContainer>
 
       {/* Skills Container */}
