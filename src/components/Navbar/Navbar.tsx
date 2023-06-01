@@ -74,7 +74,7 @@ const Navbar: React.FC<Props> = () => {
         {/** Mobile Hamburger */}
 
         <div className='md:hidden fixed top-5 right-3 flex w-full justify-end pr-5 pt-2 z-20'>
-          <button onClick={handleClick} className='hover:scale-110 hover:text-blue dark:hover:text-orange active:translate-y-0.5 active:text-darkBlue dark:active:text-darkerOrange ease-in-out duration-150 drop-shadow-lg'>
+          <button onClick={handleClick} className='hover:scale-110 hover:text-blue active:translate-y-0.5 active:text-darkBlue ease-in-out duration-150 drop-shadow-lg'>
             {!menu ? <FaBars size={40} /> : <CgClose size={45} /> }
           </button>
         </div>

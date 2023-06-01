@@ -78,8 +78,8 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest}) => {
       </div>
 
       <div className='flex justify-between md:w-1/3 w-3/4'>
-        <button onClick={() => handleClick(-1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDropleftCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`} /> </button>
-        <button onClick={() => handleClick(1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDroprightCircle size={32} fill={`${ theme === 'dark' ? '#FE5E19' : '#006FDC'}`}/> </button>
+        <button onClick={() => handleClick(-1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDropleftCircle size={32} fill={'#006FDC'} /> </button>
+        <button onClick={() => handleClick(1)} className='drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1'> <IoMdArrowDroprightCircle size={32} fill={'#006FDC'}/> </button>
       </div>
     </div>
   )
