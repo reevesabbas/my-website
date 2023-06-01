@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;700&family=Lora:ital,wght@1,700&family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=noto&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,19 +19,19 @@ section {
 }
 
 h1 {
-  @apply text-4xl md:text-5xl font-yeseva dark:text-white;
+  @apply text-4xl md:text-[38px] font-noto dark:text-white dark:font-semibold font-bold ;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-yeseva dark:text-white;
+  @apply text-3xl md:text-4xl font-noto dark:text-white font-semibold;
 }
 
 h3 {
-  @apply md:text-xl text-lg font-yeseva dark:text-orange text-blue
+  @apply md:text-xl text-lg font-noto dark:text-orange text-blue
 }
 
 p {
-  @apply font-amiri text-xl font-semibold dark:font-medium leading-loose;
+  @apply font-noto text-base leading-loose dark:font-normal font-semibold;
 }
 
 form input, form textarea {
@@ -43,6 +43,7 @@ form input, form textarea {
     @apply h-[500px] px-3 w-full md:w-[1000px] md:px-0;
   }
 }
+
 
 @layer base {
   @font-face {
@@ -59,7 +60,7 @@ form input, form textarea {
     text-shadow: 2.5px 2.5px 0px #7098FE;
   }
   .text-shadow-dark {
-    text-shadow: 3px 3px 0px #9C2500;
+    text-shadow: 3px 3px 0px #006FDC;
   }
   .text-shadow-none {
     text-shadow: none;

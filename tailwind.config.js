@@ -33,10 +33,13 @@ module.exports = {
         sm: '675px'
       },
       fontFamily: {
+        noto: ['Noto Sans'],
+        roboto: 'Roboto',
         yeseva: 'Yeseva One',
         amiri: 'Amiri-Regular',
         fjalla: 'Fjalla-One',
-      }
+      },
+
     },
   },
   plugins: [],
