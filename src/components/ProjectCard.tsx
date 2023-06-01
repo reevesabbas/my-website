@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ description, techStack
   return (
     <div className={`${large ? 'col-span-2' : 'col-span-1'} p-8 dark:bg-[#10111a] bg-[#9896c04b] rounded-xl`}>
       <div className="absolute top-0 right-0 w-20 h-10 bg-white"></div>
-      <div className="space-y-4 h-32">
+      <div className="md:space-y-4 space-y-1 h-32">
         <h2 className="text-2xl font-semibold">{title}</h2>
         <p className="leading-7 dark:text-[#ffffff91]">{description}</p>
       </div>
