@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 html {
-  scroll-padding-top: 200px;
+  scroll-padding-top: 100px;
 }
 
 body {
