@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <section id="home" className="flex sm:px-10 px-2 sm:mt-[200px] mt-[150px]">
         <div className="flex flex-col justify-end space-y-5 text-center md:text-left">
           <h1> Hi, I&apos;m Reeves Abbas </h1>
-          <h2 className="text-blue text-3xl">Software Engineer</h2>
+          <h2 className="text-blue md:text-3xl text-2xl">Software Engineer</h2>
           <p className="text-center md:text-left">
             Welcome to my website! I am currently looking for employment as a software engineer, in the meantime
             I&apos;m working on the projects listed below to expand my experience and stay passionate about developing.

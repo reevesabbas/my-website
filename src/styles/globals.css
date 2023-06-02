@@ -18,7 +18,7 @@ section {
 }
 
 h1 {
-  @apply text-4xl font-inter text-white font-semibold;
+  @apply md:text-4xl text-3xl font-inter text-white font-semibold;
 }
 
 h2 {

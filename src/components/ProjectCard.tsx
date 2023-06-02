@@ -14,7 +14,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({ description, techStack, large, link, title }) => {
   return (
     <div className={`${large ? 'col-span-2' : 'col-span-1'} p-8 bg-gray rounded-xl`}>
-      <div className="md:space-y-4 space-y-1 h-32">
+      <div className="md:space-y-4 space-y-1 md:h-32 h-36">
         <h2 className="text-xl font-semibold">{title}</h2>
         <p className="leading-7 text-[#ffffff91]">{description}</p>
       </div>
