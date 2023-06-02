@@ -36,16 +36,13 @@ const HobbieList = () => {
           />
         </div>
         <NavButton onClick={() => setCurrHobby(HOBBIES.ALBUMS)} active={currHobby === HOBBIES.ALBUMS ? true : false}>
-          {' '}
-          MUSIC{' '}
+          MUSIC
         </NavButton>
         <NavButton onClick={() => setCurrHobby(HOBBIES.GAMES)} active={currHobby === HOBBIES.GAMES ? true : false}>
-          {' '}
-          GAMES{' '}
+          GAMES
         </NavButton>
         <NavButton onClick={() => setCurrHobby(HOBBIES.ANIME)} active={currHobby === HOBBIES.ANIME ? true : false}>
-          {' '}
-          ANIME{' '}
+          ANIME
         </NavButton>
       </nav>
 
