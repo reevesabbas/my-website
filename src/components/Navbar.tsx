@@ -23,7 +23,7 @@ const Navbar: React.FC<Props> = () => {
   return (
     <>
       <div
-        className={`fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-darkestGray z-10`}
+        className={`fixed left-0 right-0 top-0 w-full h-[75px] flex justify-center items-center bg-darkestGray z-10`}
       >
         {/** Nav */}
 
@@ -38,14 +38,14 @@ const Navbar: React.FC<Props> = () => {
             <div>
               <div className="flex space-x-8">
                 <a href="#projects">
-                  <TextButton> PROJECTS </TextButton>
+                  <TextButton>PROJECTS</TextButton>
                 </a>
                 <a href="#contact">
-                  <TextButton> CONTACT </TextButton>
+                  <TextButton>CONTACT</TextButton>
                 </a>
                 <Link href="/Abbas_Reeves.pdf">
                   <a>
-                    <TextButton> RESUME </TextButton>
+                    <TextButton>RESUME</TextButton>
                   </a>
                 </Link>
               </div>
