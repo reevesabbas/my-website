@@ -56,7 +56,6 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
           >
             <a href={link} target="_blank" rel="noopener noreferrer">
               <Image
-                priority={true}
                 alt={`${hobby[i].name} from hobby carousel`}
                 src={hobby[i].img}
                 width={w}
