@@ -4,7 +4,7 @@ module.exports = {
     colors: {
       lightestPurple: '#f5f0ff',
       lightPurple: '#DBD0F2',
-      gray: '#171A24',
+      gray: '#191C25',
       darkPurple: '#1A0144',
       darkGray: '#13151D',
       darkestGray: '#0D0E14',
