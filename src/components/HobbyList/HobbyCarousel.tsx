@@ -1,4 +1,3 @@
-import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import React, { useMemo, useState } from 'react';
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io';
@@ -29,7 +28,6 @@ const getAnim = (i: number, current: number) => {
 const trans = (l: number, s: number) => `translateX(${l}px) scale(${s})`;
 
 const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
-  const { theme, setTheme } = useTheme();
   const [currIndex, setCurrIndex] = useState(2);
   const { name, author, img, link } = useMemo(() => hobby[currIndex], [currIndex, hobby]);
   const length = useMemo(() => hobby.length, [hobby]);

@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { FaBars, FaCloudMoon } from 'react-icons/fa';
-import { BsFillSunFill } from 'react-icons/bs';
+import React, { useState } from 'react';
+import { FaBars, FaHome } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
 import { useSpring, animated as a } from 'react-spring';
 import Link from 'next/link';
@@ -14,8 +12,6 @@ interface Props {
 
 const Navbar: React.FC<Props> = () => {
   const [menu, setMenu] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [shadow, setShadow] = useState(true);
   const handleClick = () => setMenu(!menu);
 
   const slideAnim = useSpring({
@@ -24,51 +20,32 @@ const Navbar: React.FC<Props> = () => {
     config: { duration: 225 }
   });
 
-  const toggleShadow = () => {
-    if (window.pageYOffset > 50) {
-      setShadow(false);
-    } else {
-      setShadow(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', toggleShadow);
-    return () => {
-      window.removeEventListener('scroll', toggleShadow);
-    };
-  }, []);
-
   return (
     <>
       <div
-        className={`fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-lightestPurple dark:bg-darkestGray z-10 ${
-          !shadow ? 'drop-shadow-md' : 'drop-shadow-none'
-        } dark:drop-shadow-none`}
+        className={`fixed left-0 right-0 top-0 w-full h-[90px] flex justify-center items-center bg-darkestGray z-10`}
       >
         {/** Nav */}
 
         <div className="hidden md:flex">
-          <div className="pr-3 pl-5 pt-1 drop-shadow-lg">
-            {theme === 'dark' ? <BsFillSunFill size={30}> </BsFillSunFill> : <FaCloudMoon size={30}> </FaCloudMoon>}
+          <div className="pr-3 pl-5 pt-1 items-center justify-center drop-shadow-lg">
+            <FaHome size={25} color="#fff" />
           </div>
           <div className="flex space-x-[450px]">
-            <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-              {theme === 'dark' ? 'LIGHT' : 'DARK'}
-            </TextButton>
+            <a href="#home">
+              <TextButton>HOME</TextButton>
+            </a>
             <div>
               <div className="flex space-x-8">
                 <a href="#projects">
-                  {' '}
-                  <TextButton> PROJECTS </TextButton>{' '}
+                  <TextButton> PROJECTS </TextButton>
                 </a>
                 <a href="#contact">
-                  <TextButton> CONTACT </TextButton>{' '}
+                  <TextButton> CONTACT </TextButton>
                 </a>
                 <Link href="/Abbas_Reeves.pdf">
                   <a>
-                    {' '}
-                    <TextButton> RESUME </TextButton>{' '}
+                    <TextButton> RESUME </TextButton>
                   </a>
                 </Link>
               </div>
@@ -102,11 +79,6 @@ const Navbar: React.FC<Props> = () => {
         <div className="flex flex-col space-y-9 text-center">
           <a href="#home">
             <TextButton onClick={() => setMenu(false)}>HOME</TextButton>
-          </a>
-          <a className="pb-3 w-48">
-            <TextButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-              {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
-            </TextButton>
           </a>
           <a href="#projects">
             <TextButton onClick={() => setMenu(false)}>PROJECTS</TextButton>

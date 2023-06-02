@@ -13,14 +13,14 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ description, techStack, large, link, title }) => {
   return (
-    <div className={`${large ? 'col-span-2' : 'col-span-1'} p-8 dark:bg-[#10111a] bg-[#9896c04b] rounded-xl`}>
+    <div className={`${large ? 'col-span-2' : 'col-span-1'} p-8 bg-[#10111a] rounded-xl`}>
       <div className="absolute top-0 right-0 w-20 h-10 bg-white"></div>
       <div className="md:space-y-4 space-y-1 h-32">
         <h2 className="text-2xl font-semibold">{title}</h2>
-        <p className="leading-7 dark:text-[#ffffff91]">{description}</p>
+        <p className="leading-7 text-[#ffffff91]">{description}</p>
       </div>
-      <div className="w-9/10 h-[2px] dark:bg-white bg-black rounded-full" />
-      <div className="flex flex-row w-full h-8 place-content-between mt-5 px-2">
+      <div className="w-9/10 h-[2px] bg-white rounded-full mb-7" />
+      <div className="flex flex-row w-full h-8 place-content-between md:px-2">
         <div className="flex flex-row space-x-5">
           {techStack &&
             techStack.map((tech) => {

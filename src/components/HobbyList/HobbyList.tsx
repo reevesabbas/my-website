@@ -23,7 +23,7 @@ const HobbieList = () => {
   };
 
   return (
-    <div className="divide-y divide-lightGray dark:bg-gray bg-lightestPurple rounded-md drop-shadow-xl">
+    <div className="divide-y divide-lightGray bg-gray rounded-md drop-shadow-xl">
       <nav className="h-fit flex justify-end py-4 px-6 space-x-4">
         <div className="flex justify-start w-full h-8">
           <IconButton

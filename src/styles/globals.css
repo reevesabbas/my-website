@@ -53,15 +53,3 @@ form textarea {
     font-style: normal;
   }
 }
-
-@layer utilities {
-  .text-shadow {
-    text-shadow: 2.5px 2.5px 0px #7098fe;
-  }
-  .text-shadow-dark {
-    text-shadow: 3px 3px 0px #006fdc;
-  }
-  .text-shadow-none {
-    text-shadow: none;
-  }
-}

@@ -11,10 +11,10 @@ const NavButton: React.FC<Props> = ({ children, onClick, active, ...rest }) => {
       onClick={onClick}
       className={`${
         active
-          ? ' bg-darkBlue border-0 text-white scale-110 dark:text-white'
-          : 'dark:text-lighterGray hover:scale-[5px] scale-90 border-[1.5px] text-lightGray'
+          ? ' bg-darkBlue border-0 scale-110 text-white'
+          : 'text-lighterGray hover:scale-[5px] scale-90 border-[1.5px]'
       }
-       dark:border-lighterGray border-lightGray px-4 py-[3px] rounded-md font-fjalla text-lg duration-200 ease-in-out`}
+        border-lightGray px-4 py-[3px] rounded-md font-fjalla text-lg duration-200 ease-in-out`}
     >
       {children}
     </button>

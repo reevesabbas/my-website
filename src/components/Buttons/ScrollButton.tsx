@@ -37,7 +37,7 @@ const ScrollButton = () => {
       <IconButton
         Icon={BsFillArrowUpCircleFill}
         size={60}
-        addStyle="dark:bg-black bg-white rounded-full fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-5"
+        addStyle="bg-black rounded-full fixed sm:bottom-[50px] sm:right-[25px] bottom-[25px] right-5"
         onClick={scrollToTop}
       ></IconButton>
     </animated.div>
