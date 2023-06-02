@@ -5,7 +5,7 @@ import { SiElectron, SiExpress, SiTypescript } from 'react-icons/si';
 
 export const ProjectGrid = () => {
   return (
-    <div className="grid md:grid-cols-3 md:gap-8 gap-3 gap-y-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 md:gap-8 gap-6 gap-y-6">
       <ProjectCard
         title={'Pit Guru'}
         description="A desktop app with highly customizable overlays for sim-racing game iRacing."
@@ -19,7 +19,7 @@ export const ProjectGrid = () => {
       />
       <ProjectCard
         title={'Journal'}
-        description="A mobile journal application."
+        description="A mobile journaling application."
         techStack={[
           { icon: SiTypescript, color: '#007acc' },
           { icon: FaReact, color: '#61dbfb' }
@@ -28,7 +28,7 @@ export const ProjectGrid = () => {
       />
       <ProjectCard
         title={'Ergo'}
-        description="A task/log app API."
+        description="A task tracker API."
         techStack={[
           { icon: SiTypescript, color: '#007acc' },
           { icon: SiExpress, color: '#FFF' }
