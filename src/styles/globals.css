@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;700&family=Lora:ital,wght@1,700&family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=noto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: 200px;
 }
 
 body {
-  @apply flex flex-col items-center dark:bg-darkestGray bg-lightestPurple min-h-fit min-w-fit;
+  @apply flex flex-col items-center bg-darkestGray min-h-fit min-w-fit;
 }
 
 section {
@@ -18,29 +18,29 @@ section {
 }
 
 h1 {
-  @apply text-4xl md:text-[38px] font-noto dark:text-white dark:font-semibold font-bold;
+  @apply text-4xl md:text-[38px] font-inter text-white font-semibold;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-noto dark:text-white font-semibold;
+  @apply text-3xl md:text-4xl font-inter text-white font-semibold;
 }
 
 h3 {
-  @apply md:text-xl text-lg font-noto dark:text-orange text-blue;
+  @apply md:text-xl text-lg font-inter text-blue;
 }
 
 p {
-  @apply font-noto text-base leading-loose dark:font-normal font-semibold;
+  @apply font-inter text-base leading-loose font-normal;
 }
 
 form input,
 form textarea {
-  @apply dark:bg-[#36313C] bg-lightestPurple p-2 text-lg rounded-sm font-amiri;
+  @apply bg-[#36313C] p-2 text-lg rounded-sm font-inter;
 }
 
 @layer components {
   .content-container {
-    @apply h-[500px] px-3 w-full md:w-[1000px] md:px-0;
+    @apply px-3 w-full md:w-[1000px] md:px-0;
   }
 }
 

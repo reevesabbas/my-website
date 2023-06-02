@@ -4,14 +4,10 @@ module.exports = {
     colors: {
       lightestPurple: '#f5f0ff',
       lightPurple: '#DBD0F2',
-      gray: '#212635',
+      gray: '#171A24',
       darkPurple: '#1A0144',
-      darkGray: '#181b25',
-      darkestGray: '#12141C',
-      lightOrange: '#FFD3C5',
-      orange: '#FE5E19',
-      darkOrange: '#9C2500',
-      darkerOrange: '#4D1700',
+      darkGray: '#13151D',
+      darkestGray: '#0D0E14',
       lightestBlue: '#B9D1FF',
       lightBlue: '#7098FE',
       blue: '#006FDC',
@@ -30,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         noto: ['Noto Sans'],
-        roboto: 'Roboto',
+        inter: 'Inter',
         yeseva: 'Yeseva One',
         amiri: 'Amiri-Regular',
         fjalla: 'Fjalla-One'
