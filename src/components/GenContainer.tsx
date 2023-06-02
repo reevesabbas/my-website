@@ -12,13 +12,12 @@ interface Props {
 const GenContainer: React.FC<Props> = ({ children, title, icon, id, body, ...rest }) => {
   return (
     <section id={id} className="md:max-w-[1250px] w-full flex mx-auto">
-      <div className="md:w-[1000px] sm:w-full h-full flex mx-auto bg-darkGray rounded-lg sm:p-10 px-3 py-7">
+      <div className="md:w-[1000px] w-full h-full flex mx-auto bg-darkGray rounded-lg sm:p-7 px-3 py-7">
         <div className="w-full flex flex-col justify-center space-y-5 md:text-left text-center">
           <header className="flex flex-row justify-center md:justify-start">
-            <h1 className="text-3xl md:text-4xl dark:text-white"> {title} </h1>
+            <h1 className="text-3xl md:text-3xl dark:text-white"> {title} </h1>
             <div className="w-fit h-fit pl-4">
-              {' '}
-              <> {icon} </>{' '}
+              <> {icon} </>
             </div>
           </header>
           <p> {body} </p>
