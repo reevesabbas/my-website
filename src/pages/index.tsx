@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
       {/* Intro Container */}
 
-      <section id="home" className="flex sm:px-10 px-2 sm:mt-[200px] mt-[150px]">
+      <section id="home" className="flex px-2 sm:mt-[200px] mt-[150px]">
         <div className="flex flex-col justify-end space-y-5 text-center md:text-left">
           <h1> Hi, I&apos;m Reeves Abbas </h1>
           <h2 className="text-blue md:text-3xl text-2xl">Software Engineer</h2>
@@ -40,25 +40,24 @@ const Home: NextPage = () => {
             Welcome to my website! I am currently looking for employment as a software engineer, in the meantime
             I&apos;m working on the projects listed below to expand my experience and stay passionate about developing.
           </p>
-          <SocialButtons />
         </div>
       </section>
 
       {/* Projects Container */}
 
-      <GenContainer id="projects" title="Portfolio" icon={<FcBriefcase size={35} />}>
+      <GenContainer id="projects" title="Portfolio" icon={<FcBriefcase size={30} />}>
         <ProjectGrid />
       </GenContainer>
 
       {/* Skills Container */}
 
-      <GenContainer id="skills" title={'Skills'} icon={<FcSupport size={35} />}>
+      <GenContainer id="skills" title={'Skills'} icon={<FcSupport size={30} />}>
         <SkillsList size={60} />
       </GenContainer>
 
       {/* Interests Container */}
 
-      <GenContainer id="interests" title="Interests/Hobbies" icon={<FcFilmReel size={35} />}>
+      <GenContainer id="interests" title="Interests/Hobbies" icon={<FcFilmReel size={30} />}>
         <HobbieList />
       </GenContainer>
 
@@ -66,8 +65,8 @@ const Home: NextPage = () => {
 
       <GenContainer
         title={`What's Next?`}
-        icon={<FcPlanner size={35} />}
-        body="While I continue to maintain code and update my personal projects, I am always looking for more opportunities to develop my experience further. If you have any ideas please feel free to contact me!"
+        icon={<FcPlanner size={30} />}
+        body="While I continue to maintain code and update my personal projects, I am always looking for more opportunities to develop myself and others' experiences further."
       >
         {}
       </GenContainer>
@@ -77,16 +76,21 @@ const Home: NextPage = () => {
       <GenContainer
         id="contact"
         title="Contact"
-        icon={<FcFeedback size={35} />}
-        body="Feel free to leave me a message here or email me at:"
+        icon={<FcFeedback size={30} />}
+        body="Please feel free to contact me, either to connect or simply give a tip. Any feedback is welcomed and appreciated. "
       >
-        <p className="italic underline select-all"> reeves.abbas@gmail.com </p>
         <ContactForm />
       </GenContainer>
 
-      <footer className="h-full flex flex-col mx-auto justify-center items-center space-y-5 pb-10">
-        <SocialButtons />
-        <p> Let us collaborate </p>
+      <footer className="opacity-60">
+        <div className="w-full bg-white h-[1px] rounded-lg" />
+        <div className="flex flex-row justify-between py-12 items-center">
+          <div>
+            <p className="text-xl">Reeves Abbas</p>
+            <p>@ 2023</p>
+          </div>
+          <SocialButtons />
+        </div>
       </footer>
 
       <ScrollButton />

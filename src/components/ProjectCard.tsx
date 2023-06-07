@@ -18,7 +18,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ description, techStack
         <h2 className="text-xl font-semibold">{title}</h2>
         <p className="leading-7 text-[#ffffff91]">{description}</p>
       </div>
-      <div className="w-9/10 h-[2px] bg-white rounded-full mb-7" />
+      <div className="w-9/10 h-[2px] bg-white rounded-full mb-7 opacity-60" />
       <div className="flex flex-row w-full h-8 place-content-between md:px-2">
         <div className="flex flex-row space-x-5">
           {techStack &&

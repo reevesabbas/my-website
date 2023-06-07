@@ -77,15 +77,13 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
           onClick={() => handleClick(-1)}
           className="drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1"
         >
-          {' '}
-          <IoMdArrowDropleftCircle size={32} fill={'#006FDC'} />{' '}
+          <IoMdArrowDropleftCircle size={32} fill={'#006FDC'} />
         </button>
         <button
           onClick={() => handleClick(1)}
           className="drop-shadow-lg rounded-full hover:scale-125 duration-200 ease-in-out active:translate-y-1"
         >
-          {' '}
-          <IoMdArrowDroprightCircle size={32} fill={'#006FDC'} />{' '}
+          <IoMdArrowDroprightCircle size={32} fill={'#006FDC'} />
         </button>
       </div>
     </div>
