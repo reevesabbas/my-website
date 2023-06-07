@@ -18,7 +18,7 @@ section {
 }
 
 h1 {
-  @apply md:text-4xl text-3xl font-inter text-white font-semibold;
+  @apply md:text-4xl text-3xl font-inter text-white dark:text-white font-semibold;
 }
 
 h2 {
@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  @apply font-inter text-base leading-loose font-normal;
+  @apply font-inter text-base leading-loose dark:text-white font-normal;
 }
 
 form input,

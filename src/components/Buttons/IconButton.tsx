@@ -12,7 +12,7 @@ interface Props {
 const IconButton: React.FC<Props> = ({ Icon, children, onClick, size, addStyle, ...rest }) => {
   return (
     <button
-      className={`hover:scale-110 hover:text-blue active:translate-y-0.5 active:text-darkerBlue ease-in-out
+      className={`hover:scale-110 text-white hover:text-blue active:translate-y-0.5 active:text-darkerBlue ease-in-out
        duration-150 drop-shadow-lg ${addStyle}`}
       onClick={onClick}
       {...rest}
