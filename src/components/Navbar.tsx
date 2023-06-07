@@ -22,16 +22,14 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <>
-      <div
-        className={`fixed left-0 right-0 top-0 w-full h-[75px] flex justify-center items-center bg-darkestGray z-10`}
-      >
+      <div className={`fixed left-0 right-0 top-0 h-[75px] flex justify-center items-center bg-darkestGray z-10`}>
         {/** Nav */}
 
         <div className="hidden md:flex">
-          <div className="pr-3 pl-5 pt-1 items-center justify-center drop-shadow-lg">
+          <div className="pr-2 pt-1 items-center justify-center drop-shadow-lg">
             <FaHome size={25} color="#fff" />
           </div>
-          <div className="flex space-x-[450px]">
+          <div className="flex space-x-[425px]">
             <a href="#home">
               <TextButton>HOME</TextButton>
             </a>
