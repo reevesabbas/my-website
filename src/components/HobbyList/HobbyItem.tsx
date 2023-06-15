@@ -27,7 +27,7 @@ const getAnim = (i: number, current: number) => {
 //helper function to inject string into css styling.
 const trans = (l: number, s: number) => `translateX(${l}px) scale(${s})`;
 
-const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
+const HobbyItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
   const [currIndex, setCurrIndex] = useState(2);
   const { name, author, img, link } = useMemo(() => hobby[currIndex], [currIndex, hobby]);
   const length = useMemo(() => hobby.length, [hobby]);
@@ -90,4 +90,4 @@ const ListItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
   );
 };
 
-export default ListItem;
+export default HobbyItem;

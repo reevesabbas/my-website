@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
-import ListItem from './HobbyCarousel';
+import HobbyItem from './HobbyItem';
 import NavButton from './NavButton';
 import IconButton from '../Buttons/IconButton';
 import { HOBBIES, Hobby } from './assets';
@@ -47,7 +47,7 @@ const HobbieList = () => {
       </nav>
 
       <animated.div className={`justify-center mx-7 overflow-hidden`} style={panelAnim}>
-        <ListItem hobby={currHobby} w={200} h={imageHeight} />
+        <HobbyItem hobby={currHobby} w={200} h={imageHeight} />
       </animated.div>
     </div>
   );
