@@ -38,7 +38,10 @@ export const ProjectGrid = () => {
       <ProjectCard
         title={'VJR Custom Homes'}
         description="Company website I did animations for."
-        techStack={[{ icon: FaReact, color: '#61dbfb' }]}
+        techStack={[
+          { icon: SiTypescript, color: '#007acc' },
+          { icon: FaReact, color: '#61dbfb' },
+      ]}
         link="https://www.vjrcustomhomes.com/"
       />
       <ProjectCard

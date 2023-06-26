@@ -24,7 +24,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ description, techStack
           {techStack &&
             techStack.map((tech) => {
               const Icon = tech.icon;
-              return <Icon size={38} color={tech.color} key={`${tech.icon}-icon`} />;
+              return <Icon size={35} color={tech.color} key={`${tech.icon}-icon`} />;
             })}
         </div>
         <a href={link} target="_blank" rel="noopener noreferrer">
