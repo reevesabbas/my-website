@@ -19,7 +19,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ description, techStack
         <p className="leading-7 text-[#ffffff91]">{description}</p>
       </div>
       <div className="w-9/10 h-[2px] bg-white rounded-full mb-7 opacity-60" />
-      <div className="flex flex-row w-full h-8 place-content-between md:px-2">
+      <div className="flex flex-row w-full h-8 place-content-between sm:px-2">
         <div className="flex flex-row space-x-5">
           {techStack &&
             techStack.map((tech) => {
