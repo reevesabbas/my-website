@@ -41,7 +41,7 @@ const Navbar: React.FC<Props> = () => {
                 <a href="#contact">
                   <TextButton>CONTACT</TextButton>
                 </a>
-                <Link href="/Abbas_Reeves.pdf">
+                <Link href="/Reeves Abbas (Junior Engineer Resume).pdf">
                   <a>
                     <TextButton>RESUME</TextButton>
                   </a>
