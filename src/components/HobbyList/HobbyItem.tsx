@@ -68,7 +68,7 @@ const HobbyItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
         ))}
       </div>
       <div className="w-48 h-20">
-        <h4 className="font-yeseva text-lg mt-7"> {`'${name}'`} </h4>
+        <h4 className="font-yeseva text-lg mt-7 text-white"> {`'${name}'`} </h4>
         <h4 className="font-yeseva text-sm pt-2 text-lightGray"> {author} </h4>
       </div>
 

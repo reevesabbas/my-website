@@ -20,7 +20,7 @@ const GenContainer: React.FC<Props> = ({ children, title, icon, id, body, ...res
               <> {icon} </>
             </div>
           </header>
-          <p className="opacity-70"> {body} </p>
+          <p className="opacity-70 text-white"> {body} </p>
           {children}
         </div>
       </div>

@@ -16,7 +16,7 @@ const SkillsList: React.FC<Props> = ({ size, onClick, ...rest }) => {
           >
             <>
               {React.createElement(el.icon, { size: size, color: el.fill })}
-              <p className="mt-2 w-28 pt-2 text-base"> {el.name} </p>
+              <p className="mt-2 w-28 pt-2 text-base text-white"> {el.name} </p>
             </>
           </li>
         </a>
