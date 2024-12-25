@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="application-name" content="reevesabbas.com" key="website name" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut Icon" href="/favIcon.ico" />
         <title> Reeves Abbas | Full Stack Developer </title>
         <meta
           name="description"
@@ -35,29 +35,28 @@ const Home: NextPage = () => {
       <section id="home" className="flex px-2 sm:mt-[200px] mt-[150px]">
         <div className="flex flex-col justify-end space-y-5 text-center md:text-left">
           <h1> Hi, I&apos;m Reeves Abbas </h1>
-          <h2 className="text-blue md:text-3xl text-2xl">Software Engineer</h2>
+          <h2 className="text-blue md:text-3xl text-2xl">Software Developer</h2>
           <p className="text-center md:text-left text-white">
-            Welcome to my website! I am currently looking for employment as a software engineer, in the meantime
-            I&apos;m working on the projects listed below to expand my experience and stay passionate about developing.
+            Welcome to my website! I am based in the United States, currently working as a Software Developer at Loumia Inc. With a strong attention to detail and an eagerness to learn, I strive to build meaningful applications. Please feel free to explore my work and reach out to collaborate!
           </p>
         </div>
       </section>
 
       {/* Projects Container */}
 
-      <GenContainer id="projects" title="Portfolio" icon={<FcBriefcase size={30} />}>
+      <GenContainer id="projects" title="Portfolio" Icon={FcBriefcase}>
         <ProjectGrid />
       </GenContainer>
 
       {/* Skills Container */}
 
-      <GenContainer id="skills" title={'Skills'} icon={<FcSupport size={30} />}>
+      <GenContainer id="skills" title={'Skills'} Icon={FcSupport}>
         <SkillsList size={60} />
       </GenContainer>
 
       {/* Interests Container */}
 
-      <GenContainer id="interests" title="Interests/Hobbies" icon={<FcFilmReel size={30} />}>
+      <GenContainer id="interests" title="Interests/Hobbies" Icon={FcFilmReel}>
         <HobbieList />
       </GenContainer>
 
@@ -65,10 +64,10 @@ const Home: NextPage = () => {
 
       <GenContainer
         title={`What's Next?`}
-        icon={<FcPlanner size={30} />}
+        Icon={FcPlanner}
         body="While I continue to maintain code and update my personal projects, I am always looking for more opportunities to develop myself and others' experiences further."
       >
-        {}
+        { }
       </GenContainer>
 
       {/* Contact Container */}
@@ -76,7 +75,7 @@ const Home: NextPage = () => {
       <GenContainer
         id="contact"
         title="Contact"
-        icon={<FcFeedback size={30} />}
+        Icon={FcFeedback}
         body="Please feel free to contact me, either to connect or simply give a tip. Any feedback is welcomed and appreciated. "
       >
         <ContactForm />

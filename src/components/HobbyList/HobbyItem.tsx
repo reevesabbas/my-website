@@ -11,35 +11,46 @@ interface Props {
   h: number;
 }
 
-//Default animations for each hobby item.
-const getAnim = (i: number, current: number) => {
-  const isAround = i >= current - 1 && i <= current + 1;
-  const isActive = i === current;
+// Default animations for each hobby item.
+const getAnim = (i: number, current: number, length: number) => {
+  const positionIndex = ((i - current + length) % length + length) % length;
+
+  const isAround = Math.abs(positionIndex) <= 1 || Math.abs(positionIndex - length) <= 1;
+  const isActive = positionIndex === 0;
 
   return {
     scale: isActive ? 1.1 : isAround ? 0.75 : 0,
     blur: isActive ? 0 : 3,
     opacity: isAround ? 1 : 0,
-    left: (current - i) * 225 * -1
+    left: (positionIndex <= length / 2 ? positionIndex : positionIndex - length) * 225,
   };
 };
 
-//helper function to inject string into css styling.
+// Helper function to inject string into CSS styling.
 const trans = (l: number, s: number) => `translateX(${l}px) scale(${s})`;
 
 const HobbyItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
   const [currIndex, setCurrIndex] = useState(2);
-  const { name, author, img, link } = useMemo(() => hobby[currIndex], [currIndex, hobby]);
-  const length = useMemo(() => hobby.length, [hobby]);
+  const { name, author, img, link } = useMemo(() => {
+    if (!hobby.length) {
+      return { name: '', author: '', img: '', link: '' };
+    }
+    const validIndex = ((currIndex % hobby.length) + hobby.length) % hobby.length;
+    return hobby[validIndex];
+  }, [currIndex, hobby]); const length = useMemo(() => hobby.length, [hobby]);
 
-  const [props, api] = useSprings(length, (i) => ({ ...getAnim(i, currIndex) }), [currIndex]);
+  const [props, api] = useSprings(
+    length,
+    (i) => ({ ...getAnim(i, currIndex, length) }),
+    [currIndex]
+  );
 
   const handleClick = (update: number) => {
-    setCurrIndex((curr) => (curr + (update ? length : 0) + update) % length);
+    setCurrIndex((curr) => curr + update);
   };
 
   return (
-    <div className={`flex flex-col text-center justify-center items-center w-full `}>
+    <div className={`flex flex-col text-center justify-center items-center w-full`}>
       <div
         className={`overflow-hidden w-full relative flex flex-row justify-center items-center mt-10`}
         style={{ height: h * 1.2 }}
@@ -49,12 +60,12 @@ const HobbyItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
             style={{
               position: 'absolute',
               opacity,
-              transform: to([left, scale], trans)
+              transform: to([left, scale], trans),
               // filter: blur.to((v: Number) => `blur(${v}px)`),
             }}
             key={`hobby-carousel-${hobby[i].name}-${i}`}
           >
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a href={hobby[i].link} target="_blank" rel="noopener noreferrer">
               <Image
                 alt={`${hobby[i].name} from hobby carousel`}
                 src={hobby[i].img}
@@ -91,3 +102,4 @@ const HobbyItem: React.FC<Props> = ({ hobby, w, h, ...rest }) => {
 };
 
 export default HobbyItem;
+

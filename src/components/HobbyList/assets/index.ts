@@ -9,11 +9,11 @@ interface Hobby {
 
 const HOBBIES = {
   ALBUMS: [
-    { name: 'KIDS SEE GHOSTS',author: 'Kanye West & Kid Cudi',img: '/hobbies/music/ksg.jpg',link: 'https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV?si=fpZsfE-1QiagZKRDiAINug', },
-    { name: 'By Swallow Season', img: '/hobbies/music/bss.jpg', author: 'Shintaro Sakamoto', link: 'https://open.spotify.com/track/1QqSrqSjMqnwOjg2xkHRVM?si=197faa6ce6b149a8' },
     { name: 'Swimming',author: 'Mac Miller',img: '/hobbies/music/swimming.jpg',link: 'https://open.spotify.com/album/5wtE5aLX5r7jOosmPhJhhk?si=4Obax3wJQPCuxNMyFmAEkA', },
-    { name: 'The Forever Story',author: 'JID',img: '/hobbies/music/TFS.jpg',link: 'https://open.spotify.com/album/3QVjpIxcksDkJmOnvlOJjg?si=w5AS5gJgRSuzF2NoccKUCQ'},
-    { name: 'good kid, m.A.A.d city',author: 'Kendrick Lamar',img: '/hobbies/music/gkmc.jpg',link: 'https://open.spotify.com/album/3DGQ1iZ9XKUQxAUWjfC34w?si=cndTDW8fTP-KH6IDGcOjQw'},
+    { name: 'By Swallow Season', img: '/hobbies/music/bss.jpg', author: 'Shintaro Sakamoto', link: 'https://open.spotify.com/track/1QqSrqSjMqnwOjg2xkHRVM?si=197faa6ce6b149a8' },
+    { name: 'To Pimp A Butterfly',author: 'Kendrick Lamar',img: '/hobbies/music/tpab.jpg',link: 'https://open.spotify.com/album/7ycBtnsMtyVbbwTfJwRjSP?si=v-mfn1r1SAmxs1o0xyMQXg'},
+    { name: 'Luv 4 Rent',author: 'Smino',img: '/hobbies/music/Luv4Rent.jpg',link: 'https://open.spotify.com/album/6dtDTbVBQ9QwsNaqEnjsOT?si=Zt5Oa4UwRROKTXyHN25gOg'},
+    { name: 'KIDS SEE GHOSTS',author: 'Kanye West & Kid Cudi',img: '/hobbies/music/ksg.jpg',link: 'https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV?si=fpZsfE-1QiagZKRDiAINug', },
     { name: 'Call Me If You Get Lost',author: 'Tyler, the Creator',img: '/hobbies/music/getlost.jpg',link: 'https://open.spotify.com/album/45ba6QAtNrdv6Ke4MFOKk9?si=Ug8Nnn71SbWEbN049DO1Jw'},
 ], 
   GAMES: [
@@ -24,13 +24,13 @@ const HOBBIES = {
     {name: 'League of Legends',author: 'Riot Games',img: '/hobbies/games/lol.jpg',link: 'https://www.leagueoflegends.com/en-us/',},
     {name: 'Terraria',author: 'Re-Logic',img: '/hobbies/games/terraria.jpg',link: 'https://store.steampowered.com/app/105600/Terraria/',},
   ],
-  ANIME: [
-    {name: 'Hunter x Hunter (2011)',author: 'Yoshihiro Togashi',img: '/hobbies/anime/hxh.jpg',link: 'https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011',},
-    {name: 'Mob Psycho 100',author: 'ONE',img: '/hobbies/anime/mp.jpg',link: 'https://myanimelist.net/anime/32182/Mob_Psycho_100',},
-    {name: 'One Piece',author: 'Eiichiro Oda',img: '/hobbies/anime/op.jpg',link: 'https://myanimelist.net/anime/21/One_Piece',},
-    {name: 'Haikyuu!!',author: 'Haruichi Furudate',img: '/hobbies/anime/haikyuu.jpg',link: 'https://myanimelist.net/anime/20583/Haikyuu',},
-    {name: 'Fullmetal Alchemist: Brotherhood',author: 'Hiromu Arakawa',img: '/hobbies/anime/fmab.jpg',link: 'https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood',},
-    {name: 'Jujutsu Kaisen',author: 'Gege Akutami',img: '/hobbies/anime/jjk.jpg',link: 'https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV',},
+  MEDIA: [
+    {name: 'Hunter x Hunter (2011)', author: 'Yoshihiro Togashi',img: '/hobbies/media/hxh.jpg',link: 'https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011',},
+    {name: 'Mob Psycho 100',author: 'ONE',img: '/hobbies/media/mp.jpg',link: 'https://myanimelist.net/anime/32182/Mob_Psycho_100',},
+    {name: 'Everything Everywhere All at Once',author: 'Daniel Scheinert, Daniel Kwan',img: '/hobbies/media/eeaao.jpg',link: 'https://www.imdb.com/title/tt6710474/',},
+    {name: 'One Piece',author: 'Eiichiro Oda',img: '/hobbies/media/op.jpg',link: 'https://myanimelist.net/anime/21/One_Piece',},
+    {name: 'Mr. Robot',author: 'Sam Esmail',img: '/hobbies/media/mrrobot.jpg',link: 'https://www.imdb.com/title/tt4158110/',},
+    {name: 'Better Call Saul',author: 'Vince Gilligan',img: '/hobbies/media/bcs.jpg',link: 'https://www.imdb.com/title/tt3032476/',},
   ]
 }
 

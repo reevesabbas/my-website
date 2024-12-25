@@ -10,8 +10,8 @@ import { useSpring, animated } from 'react-spring';
 const HobbieList = () => {
   const [showHobbies, setShowHobbies] = useState(true);
   const [currHobby, setCurrHobby] = useState(HOBBIES.ALBUMS);
-  const imageHeight = currHobby === HOBBIES.ANIME ? 300 : 200;
-  const animHeight = currHobby === HOBBIES.ANIME ? 550 : 450;
+  const imageHeight = currHobby === HOBBIES.MEDIA ? 300 : 200;
+  const animHeight = currHobby === HOBBIES.MEDIA ? 575 : 450;
 
   const panelAnim = useSpring({
     height: showHobbies ? animHeight : 0,
@@ -41,8 +41,8 @@ const HobbieList = () => {
         <NavButton onClick={() => setCurrHobby(HOBBIES.GAMES)} active={currHobby === HOBBIES.GAMES ? true : false}>
           GAMES
         </NavButton>
-        <NavButton onClick={() => setCurrHobby(HOBBIES.ANIME)} active={currHobby === HOBBIES.ANIME ? true : false}>
-          ANIME
+        <NavButton onClick={() => setCurrHobby(HOBBIES.MEDIA)} active={currHobby === HOBBIES.MEDIA ? true : false}>
+          MEDIA
         </NavButton>
       </nav>
 

@@ -41,7 +41,7 @@ const Navbar: React.FC<Props> = () => {
                 <a href="#contact">
                   <TextButton>CONTACT</TextButton>
                 </a>
-                <Link href="/Reeves Abbas (Junior Engineer Resume).pdf">
+                <Link href="/ReevesAbbasResume.pdf">
                   <a>
                     <TextButton>RESUME</TextButton>
                   </a>
@@ -66,9 +66,8 @@ const Navbar: React.FC<Props> = () => {
       {/**Mobile Nav */}
 
       <a.div
-        className={`${
-          menu ? '' : 'pointer-events-none'
-        } overflow-hidden z-10 md:hidden fixed top-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-gray flex flex-col justify-center items-center`}
+        className={`${menu ? '' : 'pointer-events-none'
+          } overflow-hidden z-10 md:hidden fixed top-0 bottom-0 right-0 bg-[#e5e6f8] dark:bg-gray flex flex-col justify-center items-center`}
         style={{
           width: slideAnim.width.to((v) => `${v}%`),
           opacity: slideAnim.opacity
