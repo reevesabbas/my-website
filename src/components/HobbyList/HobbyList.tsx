@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
 import HobbyItem from './HobbyItem';
-import NavButton from './NavButton';
+import HobbyNavBtn from './HobbyNavBtn';
 import IconButton from '../Buttons/IconButton';
 import { HOBBIES, Hobby } from './assets';
 import { useSpring, animated } from 'react-spring';
@@ -35,15 +35,15 @@ const HobbieList = () => {
             addStyle={`${!showHobbies ? 'rotate-0' : '-rotate-180'}`}
           />
         </div>
-        <NavButton onClick={() => setCurrHobby(HOBBIES.ALBUMS)} active={currHobby === HOBBIES.ALBUMS ? true : false}>
+        <HobbyNavBtn onClick={() => setCurrHobby(HOBBIES.ALBUMS)} active={currHobby === HOBBIES.ALBUMS ? true : false}>
           MUSIC
-        </NavButton>
-        <NavButton onClick={() => setCurrHobby(HOBBIES.GAMES)} active={currHobby === HOBBIES.GAMES ? true : false}>
+        </HobbyNavBtn>
+        <HobbyNavBtn onClick={() => setCurrHobby(HOBBIES.GAMES)} active={currHobby === HOBBIES.GAMES ? true : false}>
           GAMES
-        </NavButton>
-        <NavButton onClick={() => setCurrHobby(HOBBIES.MEDIA)} active={currHobby === HOBBIES.MEDIA ? true : false}>
+        </HobbyNavBtn>
+        <HobbyNavBtn onClick={() => setCurrHobby(HOBBIES.MEDIA)} active={currHobby === HOBBIES.MEDIA ? true : false}>
           MEDIA
-        </NavButton>
+        </HobbyNavBtn>
       </nav>
 
       <animated.div className={`justify-center mx-7 overflow-hidden`} style={panelAnim}>

@@ -22,32 +22,28 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <>
-      <div className={`fixed left-0 right-0 top-0 h-[75px] flex justify-center items-center bg-darkestGray z-10`}>
+      <div className={`h-[75px] flex justify-center items-center bg-darkestGray z-10`}>
         {/** Nav */}
 
-        <div className="hidden md:flex">
-          <div className="pr-2 pt-1 items-center justify-center drop-shadow-lg">
-            <FaHome size={25} color="#fff" />
-          </div>
-          <div className="flex space-x-[425px]">
+        <div className="hidden md:flex w-full justify-between">
+          <div className="pr-2 flex flex-row  items-center justify-center drop-shadow-lg">
+            <FaHome size={25} color="#fff" className='mr-2' />
             <a href="#home">
               <TextButton>HOME</TextButton>
             </a>
-            <div>
-              <div className="flex space-x-8">
-                <a href="#projects">
-                  <TextButton>PROJECTS</TextButton>
-                </a>
-                <a href="#contact">
-                  <TextButton>CONTACT</TextButton>
-                </a>
-                <Link href="/ReevesAbbasResume.pdf">
-                  <a>
-                    <TextButton>RESUME</TextButton>
-                  </a>
-                </Link>
-              </div>
-            </div>
+          </div>
+          <div className="flex space-x-8">
+            <a href="#projects">
+              <TextButton>PROJECTS</TextButton>
+            </a>
+            <a href="#contact">
+              <TextButton>CONTACT</TextButton>
+            </a>
+            <Link href="/ReevesAbbasResume.pdf">
+              <a>
+                <TextButton>RESUME</TextButton>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -83,7 +79,7 @@ const Navbar: React.FC<Props> = () => {
           <a href="#contact">
             <TextButton onClick={() => setMenu(false)}>CONTACT</TextButton>
           </a>
-          <Link href="/Abbas_Reeves.pdf">
+          <Link href="/ReevesAbbasResume.pdf">
             <a>
               <TextButton>RESUME</TextButton>
             </a>

@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
       {/* Intro Container */}
 
-      <section id="home" className="flex px-2 sm:mt-[200px] mt-[150px]">
+      <section id="home" className="flex px-2">
         <div className="flex flex-col justify-end space-y-5 text-center md:text-left">
           <h1> Hi, I&apos;m Reeves Abbas </h1>
           <h2 className="text-blue md:text-3xl text-2xl">Software Developer</h2>

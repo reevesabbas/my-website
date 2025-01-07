@@ -5,15 +5,14 @@ interface Props {
   active: boolean;
 }
 
-const NavButton: React.FC<Props> = ({ children, onClick, active, ...rest }) => {
+const HobbyNavBtn: React.FC<Props> = ({ children, onClick, active, ...rest }) => {
   return (
     <button
       onClick={onClick}
-      className={`${
-        active
-          ? ' bg-darkBlue border-0 scale-110 text-white'
-          : 'text-lighterGray hover:scale-[5px] scale-90 border-[1.5px]'
-      }
+      className={`${active
+        ? ' bg-darkBlue border-0 scale-110 text-white'
+        : 'text-lighterGray hover:scale-[5px] scale-90 border-[1.5px]'
+        }
         border-lightGray px-4 py-[3px] rounded-md font-fjalla text-lg duration-200 ease-in-out`}
     >
       {children}
@@ -21,4 +20,4 @@ const NavButton: React.FC<Props> = ({ children, onClick, active, ...rest }) => {
   );
 };
 
-export default NavButton;
+export default HobbyNavBtn;
