@@ -22,8 +22,8 @@ const Home: NextPage = () => {
         <title> Reeves Abbas | Full Stack Developer </title>
         <meta
           name="description"
-          content="Reeves Abbas is a Software Engineer that works with
-          numerous frameworks and languages such as- JS, CSS, HTML5 and React. Click here for more information."
+          content="Reeves Abbas is a Fullstack Software Developer that works with
+          numerous frameworks and languages such as- JS/TS, C#, React and more. Click here :)"
           key="description"
         />
       </Head>
