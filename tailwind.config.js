@@ -17,7 +17,8 @@ module.exports = {
       white: '#FFFFFF',
       black: '#000000',
       lighterGray: '#9c9aaa',
-      lightGray: '#807E8C'
+      lightGray: '#807E8C',
+      lightestGray: '#CBCBCB'
     },
     extend: {
       screens: {
