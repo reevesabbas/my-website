@@ -37,7 +37,9 @@ const Home: NextPage = () => {
           <h1> Hi, I&apos;m Reeves Abbas </h1>
           <h2 className="text-blue md:text-3xl text-2xl">Software Developer</h2>
           <p className="text-center md:text-left text-white">
-            Welcome to my website! I am based in the United States, currently working as a Software Developer at Loumia Inc. With a strong attention to detail and an eagerness to learn, I strive to build meaningful applications. Please feel free to explore my work and reach out to collaborate!
+            Based in the United States, working as a Full-Stack Developer at Loumia Inc.
+            I enjoy coding, but what I enjoy most is collaborating with others to achieve a common goal.
+            Applying our skillets and creativity to the production of a project or idea is an immense privilege that I am always looking forward to.
           </p>
         </div>
       </section>
