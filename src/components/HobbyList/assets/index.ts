@@ -13,15 +13,15 @@ const HOBBIES = {
     { name: 'By Swallow Season', img: '/hobbies/music/bss.jpg', author: 'Shintaro Sakamoto', link: 'https://open.spotify.com/track/1QqSrqSjMqnwOjg2xkHRVM?si=197faa6ce6b149a8' },
     { name: 'To Pimp A Butterfly',author: 'Kendrick Lamar',img: '/hobbies/music/tpab.jpg',link: 'https://open.spotify.com/album/7ycBtnsMtyVbbwTfJwRjSP?si=v-mfn1r1SAmxs1o0xyMQXg'},
     { name: 'Luv 4 Rent',author: 'Smino',img: '/hobbies/music/Luv4Rent.jpg',link: 'https://open.spotify.com/album/6dtDTbVBQ9QwsNaqEnjsOT?si=Zt5Oa4UwRROKTXyHN25gOg'},
-    { name: 'KIDS SEE GHOSTS',author: 'Kanye West & Kid Cudi',img: '/hobbies/music/ksg.jpg',link: 'https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV?si=fpZsfE-1QiagZKRDiAINug', },
+    { name: 'MM...FOOD', author: 'MF DOOM',img: '/hobbies/music/mmfood.jpg',link: 'https://open.spotify.com/album/1UcS2nqUhxrZjrBZ3tHk2N?si=ZznB3kpBQqGINL48Pix19g', },
     { name: 'Call Me If You Get Lost',author: 'Tyler, the Creator',img: '/hobbies/music/getlost.jpg',link: 'https://open.spotify.com/album/45ba6QAtNrdv6Ke4MFOKk9?si=Ug8Nnn71SbWEbN049DO1Jw'},
 ], 
   GAMES: [
     {name: 'DARK SOULS III',author: 'FromSoftware',img: '/hobbies/games/ds3.jpg',link: 'https://store.steampowered.com/app/374320/DARK_SOULS_III/',},
-    {name: 'CS:GO',author: 'Valve',img: '/hobbies/games/csgo.jpg',link: 'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/', },
+    {name: 'Counter Strike 2',author: 'Valve',img: '/hobbies/games/cs2.jpg',link: 'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/', },
     {name: 'Risk of Rain 2',author: 'Hopoo Games',img: '/hobbies/games/ror2.jpg',link: 'https://store.steampowered.com/app/632360/Risk_of_Rain_2/',},
     {name: 'Sekiro: Shadows Die Twice',author: 'FromSoftware',img: '/hobbies/games/sekiro.jpg',link: 'https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/',},
-    {name: 'League of Legends',author: 'Riot Games',img: '/hobbies/games/lol.jpg',link: 'https://www.leagueoflegends.com/en-us/',},
+    {name: 'Devil May Cry 5',author: 'Capcom',img: '/hobbies/games/dmc5.jpg',link: 'https://www.devilmaycry5.com/',},
     {name: 'Terraria',author: 'Re-Logic',img: '/hobbies/games/terraria.jpg',link: 'https://store.steampowered.com/app/105600/Terraria/',},
   ],
   MEDIA: [
