@@ -12,11 +12,11 @@ const SkillsList: React.FC<Props> = ({ size, onClick, ...rest }) => {
       {SKILLS.map((el) => (
         <a href={el.link} target="_blank" rel="noopener noreferrer" key={`${el.name}`} className="flex justify-center">
           <li
-            className={`flex flex-col p-2 py-7 mt-2 items-center justify-center w-[120px] h-55 rounded-md hover:bg-[#b4b9ce]/5 scale-90 hover:scale-105 ease-in-out duration-300 active:translate-y-2`}
+            className={`flex flex-col p-2 py-7 mt-2 items-center justify-center w-[160px] h-[180px] rounded-md hover:bg-[#b4b9ce]/5 scale-90 hover:scale-105 ease-in-out duration-150 active:translate-y-2`}
           >
             <>
               {React.createElement(el.icon, { size: size, color: el.fill })}
-              <p className="mt-2 w-28 pt-2 text-base text-white"> {el.name} </p>
+              <p className="mt-2 w-28 pt-2 text-base text-lightestGray font-semibold"> {el.name} </p>
             </>
           </li>
         </a>
